@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faruq Arowolo</title>
+    <link rel="stylesheet" href="/CSS/contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/images/thumbnail icon.ico">
+    <script src="/JS/index.js" defer></script>
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "77gqd06kCuTixVg-v",
+        });
+    })();
+    </script>
+
+</head>
+<body>
+    <section class="alert show">
+        <span><i class='bx bxs-check-circle check-btn'></i> Your message has been sent!</span>
+        <section class="cancel bx bx-x"></section>
+    </section>
+
+
+    <section class="nav-header">
+        <nav class="glass"> 
+        <section class="logo">
+            <a href="index.html"><img class="logo-img"  src="/images/logo-dark.png" alt=""><span>Faruq Arowolo</span></a>
+        </section>
+
+        <ul>
+            <li><a href="/work1.html"><i class="bx bx-briefcase nav-icon"></i>Work</a></li>
+            <li><a href="/aboutme.html"><i class="bx bx-user nav-icon"></i>About</a></li>
+            <li><a href="/contact.html" class="active"><i class="bx bx-phone nav-icon"></i>Contact</a></li>
+            <li class="mode-change"><i class='bx bx-moon nav-icon' ></i></li>
+        </ul>
+
+        
+        <div class='bx bx-menu' id="menu-btn"></div>
+        
+    </nav>
+    </section>
+
+
+    <section class="cursor-dot" data-cursor-dot></section>
+    <section class="cursor-outline" data-cursor-outline=""></section>
+
+
+    <main>
+       
+        <section class="contact-cont">
+            <section class="contact-hd">
+                <h1>Let’s work together</h1>
+                <span>Open for Collaboration Available for Gig, Full-Time and Part-Time Roles.</span>
+            </section>
+            <section  class="contact-form">
+                <input type="text" placeholder="Name" class="name" id="name" required>
+                <span class="error-msg">Erro</span>
+                <input type="email" placeholder="Email" class="name" id="email" required>
+                <span class="error-msg">Erro</span>
+                <input type="text" placeholder="Subject" class="name" id="subject" required>
+                <span class="error-msg">Erro</span>
+                <textarea type="text" placeholder="Message" class="message" id="message" required></textarea>
+                <span class="error-msg">Erro</span>
+                <button class="contact-form-btn" onclick="sendMail()">Send A Message</button>
+            </section>
+        </section>
+
+
+        <section class="lets-work">
+            <article class="lets-work-cont">
+                <h1>Let’s work together</h1>
+                <p>I would love to hear from you, so please feel free to reach out.</p>
+            </article>
+
+            <article class="resume-btn-contact-btn">
+                <a class="resume-btn" href="https://drive.google.com/file/d/1grmsuaJomwKBo_DjEZkMKJipkGqN03pa/view?usp=drive_link" target="_blank">CV/Resume</a>
+                <a class="contact-btn" href="mailto:pharkmanlee@gmail.com">Hire Me</a>
+            </article>
+        </section>
+
+        <section class="social-platforms">
+            <section class="social-platform1">
+                <a href="https://www.linkedin.com/in/faruq-arowolo-4465461a8" target="_blank">
+                    <i class='bx bxl-linkedin-square' style="font-size: 24px;"></i>Linkedin
+                </a>
+            </div>
+            </section>
+
+            <section class="social-platform2">
+                <a href="https://twitter.com/Pharkman_" target="_blank">
+                    <i class='bx bxl-twitter' style="font-size: 24px;" ></i>Twitter
+                </a>
+
+            </section>
+
+            <section class="social-platform3">
+                <a href="https://www.instagram.com/pharkmanlee/" target="_blank">
+                    <i class='bx bxl-instagram-alt' style="font-size: 24px;"></i>Instagram
+                </a>
+
+            </section>
+
+            <section class="social-platform4">
+                <a href="https://m.facebook.com/public/Faruq-Arowolo phar" target="_blank">
+                    <i class='bx bxl-facebook-circle' style="font-size: 24px;" ></i>Facebook
+                </a>
+
+            </section>
+
+            <section class="social-platform5">
+                <a href="https://www.behance.net/faruqsola" target="_blank">
+                    <i class='bx bxl-behance' style="font-size: 24px;"></i>Behance
+                </a>
+
+            </section>
+
+            <section class="social-platform6">
+                <a href="https://dribbble.com/Pharkmanlee" target="_blank">
+                    <i class='bx bxl-dribbble' style="font-size: 24px;"></i>Dribble
+                </a>
+
+            </section>
+
+            <section class="social-platform7">
+                <a href="https://github.com/Pharkman" target="_blank">
+                    <i class='bx bxl-github' style="font-size: 24px;"></i>GitHub
+                </a>
+
+            </section>
+
+            <section class="social-platform8">
+                <a href="https://discordapp.com/users/945779063111438436" target="_blank"> <i class='bx bxl-discord-alt' style="font-size: 24px;"></i>Discord
+                    
+                </a>
+            </section>
+
+        </section>
+
+    </main> 
+
+    <footer>
+        <p>&copy;2024 <span>Design and Developed by Faruqarowolo.</span>  All Rights Reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="contact.js"></script>
+
+    <script src="cursor.js"></script>
+</body>
+</html>
