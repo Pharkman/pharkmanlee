@@ -145,8 +145,8 @@ body{
 .cursor-dot,
 .cursor-outline{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1111;
@@ -168,79 +168,12 @@ body{
     background-color: var(--gr-1-color-op-02);
     backdrop-filter: blur(20px);
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1111;
     pointer-events: none;
-}
-
-
-.alert{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 330px;
-    height: 60px;
-    padding-left: 10px;
-    background-color: var(--txt-color-op-06);
-    border-left: 5px solid var(--txt-color);
-    border-radius: 3px;
-    color: #fff;
-    z-index: 1111;
-    overflow: hidden;
-    position: absolute;
-    right: 0px;
-    top: 20%;
-    transform: translateX(calc(100% + 30px));
-    
-}
-
-.alert span{
-    display: flex;
-    vertical-align: middle;
-}
-
-.check-btn{
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.cancel{
-    padding: 21px 15px;
-    background-color: var(--txt-color);
-    /* height: 100%; */
-    display: flex;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--bd-color);
-    cursor: pointer;
-}
-
-
-
-/* .alert.show{
-transform: translateX(0%);
-} */
-
-@keyframes show-slide {
-    0%{
-        transform: translateX(100%);
-    }
-
-    40%{
-        transform: translateX(-10%);
-    }
-
-    80%{
-        transform: translateX(0%);
-    }
-
-    100%{
-        transform: translateX(-10%);
-    }
-    
 }
 
 .nav-header{
@@ -269,12 +202,24 @@ nav{
 }
 
 
-nav ul li a .nav-icon{
-    font-size: 16px;
-    vertical-align: middle;
-    margin-right: 6px;
+.icons {
+    color: var(--txt-color);
+    transition: all .55s ease;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 14px 14px;
+    height: 48px;
+    width: 48px;
+    margin-left: 3px;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
+
+.icons.active{
+    border-top: 2px solid var(--txt-color);
+}
+
 
 nav ul{
     display: flex;
@@ -288,12 +233,11 @@ nav ul li a{
     transition: all .55s ease;
     font-size: 14px;
     font-weight: 400;
-    padding: 22px 24px;
+    padding: 20px 24px;
     height: 65px;
-    margin-left: 18px;
-
-   
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
 nav ul li a.active{
@@ -750,60 +694,41 @@ footer span{
     }
     
     
-    nav ul li a .nav-icon{
+    .icons{
+        display: flex;
+    }
 
+    .nav-txt{
+        display: none;
     }
-    
-    nav ul{
-    }
-    
-    nav ul li a{
-    }
+
 }
 
 /* md */
 @media (max-width: 768px) {
+
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
+
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 80%;
-        max-width: 100%;
-
+        top: 88%;
+        width: 100%;
     }
     nav{
         height: 50px;
         padding: 0px 5px;
-       
     }
     
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
-    }
-
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
     }
 
     .logo a span{
@@ -818,47 +743,28 @@ footer span{
 
 /* sm */
 @media (max-width: 640px) {
-    /* nav bar responsive */
-    .nav-header{
-        padding: 0px 20px;
-        top: 80%;
-        max-width: 100%;
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
 
+    /* nav bar responsive */
+   .nav-header{
+        padding: 0px 20px;
+        top: 88%;
+        width: 100%;
     }
     nav{
         height: 50px;
         padding: 0px 5px;
-       
     }
     
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
-    }
-
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
     }
 
     .logo a span{
@@ -873,13 +779,16 @@ footer span{
 
 /* xs */
 @media (max-width: 475px) {
-
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
 
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 90%;
-        max-width: 100%;
+        top: 88%;
+        width: 100%;
 
     }
     nav{
@@ -889,34 +798,12 @@ footer span{
        
     }
     
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
-    }
-
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
     }
 
     .logo a span{
@@ -1040,12 +927,15 @@ footer span{
 
 @media (max-width: 375px) {
 
-
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 80%;
-        max-width: 100%;
+        top: 88%;
+        width: 100%;
 
     }
     nav{
@@ -1061,27 +951,12 @@ footer span{
         display: none;
     } */
     
-    nav ul li a .nav-icon{
+    .icons{
         display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .nav-txt{
+        display: none;
     }
 
     .logo a span{
@@ -1189,20 +1064,20 @@ footer span{
 
 @media (max-width: 350px) {
 
-
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
     /* nav bar responsive */
-    .nav-header{
+   .nav-header{
         padding: 0px 20px;
-        top: 80%;
-        max-width: 100%;
-
+        top: 88%;
+        width: 100%;
     }
     nav{
         height: 50px;
         padding: 0px 5px;
-       
     }
-    
     /* nav ul li a .nav-icon{
         font-size: 16px;
         vertical-align: middle;
@@ -1210,27 +1085,12 @@ footer span{
         display: none;
     } */
     
-    nav ul li a .nav-icon{
+    .icons{
         display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .nav-txt{
+        display: none;
     }
 
     .logo a span{

@@ -123,7 +123,6 @@
 } 
 
 
-
 *{
     max-width: 1280px;
     padding: 0px;
@@ -146,8 +145,8 @@ body{
 .cursor-dot,
 .cursor-outline{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1111;
@@ -169,8 +168,8 @@ body{
     background-color: var(--gr-1-color-op-02);
     backdrop-filter: blur(20px);
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1111;
@@ -202,14 +201,23 @@ nav{
     -webkit-backdrop-filter: blur(10px);
 }
 
-nav ul li a .nav-icon{
-    font-size: 16px;
-    vertical-align: middle;
-    margin-right: 6px;
+.icons {
+    color: var(--txt-color);
+    transition: all .55s ease;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 14px 14px;
+    height: 48px;
+    width: 48px;
+    margin-left: 3px;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-
+.icons.active{
+    border-top: 2px solid var(--txt-color);
+}
 
 nav ul{
     display: flex;
@@ -222,9 +230,11 @@ nav ul li a{
     transition: all .55s ease;
     font-size: 14px;
     font-weight: 400;
-    padding: 21px 24px;
-    height: 60px;
-    margin-left: 18px;
+    padding: 20px 24px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li a.active{
@@ -853,7 +863,7 @@ hgroup h2{
 .ppl-wrds{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 32px;
+    margin-top: 22px;
     gap: 19px;
 }
 
@@ -1196,47 +1206,33 @@ footer span{
 
 /* md */
 @media (max-width: 768px) {
+
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
+
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 80%;
+        top: 88%;
         width: 100%;
-
     }
     nav{
         height: 50px;
         padding: 0px 5px;
-       
     }
-    
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .mode-change {
+        margin-left: 8px;
     }
 
     .logo a span{
@@ -1330,12 +1326,12 @@ footer span{
         width: 100%;
         display: flex;
         flex-direction: column;
+        gap: 20px;
     }
 
     .img1, .img2, .half-img1, .half-img2{
         width: 100%;
         height: 526px;
-
     }
 
     .img1{
@@ -1385,33 +1381,12 @@ footer span{
         padding: 0px 20px;
     }
 
-    /* .work-exp{
-        display: flex;
-        flex-direction: column;
-        width: var(--max-width);
-        padding: 0px 120px;
-        margin-top: 80px;
-        position: relative;
-        height: fit-content;
-        color: var(--txt-color);
-    } */
-    
       /* work-exp */
       .work-exp{
         width: 100%;
         padding: 0px 20px;
     }
     
-    /* .work-exp{
-        display: flex;
-        flex-direction: column;
-        width: var(--max-width);
-        padding: 0px 120px;
-        margin-top: 80px;
-        position: relative;
-        height: fit-content;
-        color: var(--txt-color);
-    } */
     
     .work-exp-label{
         display: flex;
@@ -1631,6 +1606,15 @@ footer span{
     }
 
     /* skill container end */
+
+
+    .tools-container{
+        width: 100%;
+    }
+
+    .tool-box-1{
+        width: 100%;
+    }
 
 
     /* education container */
@@ -1765,47 +1749,33 @@ footer span{
 
 /* sm */
 @media (max-width: 640px) {
+
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
+
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 80%;
+        top: 88%;
         width: 100%;
-
     }
     nav{
         height: 50px;
         padding: 0px 5px;
-       
     }
     
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .mode-change {
+        margin-left: 8px;
     }
 
     .logo a span{
@@ -1917,82 +1887,79 @@ footer span{
     /* work-box container responsive end */
 
         /* work-exp */
-        .work-exp{
+    .work-exp{
             width: 100%;
             padding: 0px 20px;
-        }
+    }
     
-        /* .work-exp{
-            display: flex;
-            flex-direction: column;
-            width: var(--max-width);
-            padding: 0px 120px;
-            margin-top: 80px;
-            position: relative;
-            height: fit-content;
-            color: var(--txt-color);
-        } */
         
-        
-        .work-exp-label{
+    .work-exp-label{
             display: flex;
             justify-content: start;
             gap: 10px;
-        }
+    }
         
-        .work-exp-label h1{
+    .work-exp-label h1{
             font-size: 24px;
-        }
+    }
         
-        .work-exp-label i{
+    .work-exp-label i{
             font-size: 24px;
-        }
+    }
         
         
-        .comapany-nm-rl{
+    .comapany-nm-rl{
             padding: 20px 0px  10px 20px;
     
-        }
+    }
         
-        .company-nm h1{
+    .company-nm h1{
             font-size: 24px;
             font-weight: var(--font-weight-500);
-        }
+    }
         
-        .work-exp-rl{
+    .work-exp-rl{
             display: flex;
             margin-bottom: 20px;
-        }
+    }
         
-        .work-exp-rl span{
+    .work-exp-rl span{
             margin-right: 0px;
             font-size: 16px;
-        }
+    }
         
-        .work-exp-rl span li{
+    .work-exp-rl span li{
             margin-left: 30px;
-        }
+    }
         
-        .work-exp-desc li{
+    .work-exp-desc li{
             font-size: 14px;
             line-height: 20px;
     
-        }
+    }
         
-        .circle-nm{
+    .circle-nm{
             width: 20px;
             height: 20px;
             position: absolute;
-            left: 6%;
+            left: 5.9%;
             
-        }
-        .circle-nm-2{
+    }
+    .circle-nm-2{
             width: 14px;
             height: 14px;
     
-        }
+    }
         
         /* work-exp end */
+
+    .tools-container{
+        width: 100%;
+    }
+
+    .tool-box-1{
+        width: 100%;
+    }
 
 
 
@@ -2032,49 +1999,31 @@ footer span{
 /* xs */
 @media (max-width: 475px) {
 
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
 
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 90%;
-        max-width: 100%;
-
+        top: 88%;
+        width: 100%;
     }
     nav{
-        
         height: 50px;
         padding: 0px 5px;
-       
     }
-    
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .mode-change {
+        margin-left: 8px;
     }
 
     .logo a span{
@@ -2163,17 +2112,69 @@ footer span{
         padding: 0px 20px;
     }
     
-    /* .work-exp{
-        display: flex;
-        flex-direction: column;
-        width: var(--max-width);
-        padding: 0px 120px;
-        margin-top: 80px;
-        position: relative;
-        height: fit-content;
-        color: var(--txt-color);
-    } */
+
     
+    .work-exp-label{
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+    }
+    
+    .work-exp-label h1{
+        font-size: 24px;
+    }
+    
+    .work-exp-label i{
+        font-size: 24px;
+    }
+    
+    
+    .comapany-nm-rl{
+        padding: 20px 0px  10px 20px;
+
+    }
+    
+    .company-nm h1{
+        font-size: 24px;
+        font-weight: var(--font-weight-500);
+    }
+    
+    .work-exp-rl{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .work-exp-rl span{
+        margin-right: 0px;
+        font-size: 14px;
+    }
+    
+    .work-exp-rl span li{
+        margin-left: 30px;
+    }
+    
+    .work-exp-desc li{
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+    
+    .circle-nm{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 6%;
+        
+    }
+    .circle-nm-2{
+        width: 14px;
+        height: 14px;
+
+    }
+    
+    /* work-exp end */
+
+
     .work-exp-label{
         display: flex;
         justify-content: start;
@@ -2223,7 +2224,494 @@ footer span{
         width: 20px;
         height: 20px;
         position: absolute;
-        left: 6%;
+        left: 5.9%;
+        
+    }
+    .circle-nm-2{
+        width: 14px;
+        height: 14px;
+
+    }
+    /* work-exp end */
+
+    .skills-col{
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .skills-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: var(--width-100);
+        align-items: center;
+        justify-content: center;
+        gap: 15px 15px;
+    }
+
+    .skill-box-1, .skill-box-2, .skill-box-3, .skill-box-4,
+    .skill-box-5, .skill-box-6, .skill-box-7, .skill-box-8,
+    .skill-box-9, .skill-box-10, .skill-box-11, .skill-box-12, span{
+        font-size: 14px;
+    }
+    
+    .skill-box-1, .skill-box-2, .skill-box-3, .skill-box-4,
+    .skill-box-5, .skill-box-6, .skill-box-7, .skill-box-8,
+    .skill-box-9, .skill-box-10, .skill-box-11, .skill-box-12
+    {
+        background-color: var(--gr-1-color);
+        border-radius: 10px;
+        border: 1px solid var(--str-color);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--txt-color);
+    }
+    
+    .skill-box-1{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-2{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-3{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-4{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-5{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-6{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-7{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-8{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-9{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-10{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-11{
+        width: 160px;
+        padding: 20px 0px;
+    }
+    
+    .skill-box-12{
+        width: 160px;
+        padding: 20px 0px;
+    }
+
+    /* skill container end */
+
+     .tools-container{
+        width: 100%;
+    }
+
+    .tool-box-1{
+        width: 100%;
+    }
+
+
+    /* education container */
+
+    .schools-details{
+        display: flex;
+        flex-direction: column;
+        color: var(--txt-color);
+    }
+    
+    
+    .school-month{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+
+    
+    .school span{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .months li{
+        font-weight: 400;
+        font-style: normal;
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+
+    .sch-honor{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+
+    /* what peolple says  */
+
+    .wht-ppl-sy-abt-me{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+        color: var(--txt-color);
+    }
+    
+    .wht-ppl-sy-heading{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .wht-ppl-sy-heading h1{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    
+    .ppl-wrds{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 24px;
+        gap: 19px;
+    }
+    
+    .ppl-bx-1{
+        display: flex;
+        flex-direction: column;
+        width: var(--width-100);
+        height: 290px;
+        padding: 15px;
+        background-color: var(--gr-1-color);
+        border: 1px solid var(--str-color);
+        border-radius: 15px;
+        position: relative;
+    }
+    
+    .quote-icon{
+        position: absolute;
+        font-size: 32px;
+
+    }
+    
+
+    
+    .ppl-heading span{
+        font-size: 14px;
+    
+    }
+    
+
+
+
+    /* contact container reponsive */
+    .contact-cont{
+        width: 100%;
+        padding: 0px 20px;
+        margin-top: 40px;
+    }
+
+    .contact-hd{
+        text-align: center;
+    }
+
+    .contact-hd h1{
+        font-size: 24px;
+    }
+
+    .contact-hd span{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .contact-form{
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* end of contact container responsive */
+
+
+    /* let's work responsive */
+    .lets-work{
+        width: 100%;
+        padding: 0px 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .lets-work-cont{
+        text-align: center;
+    }
+
+    .lets-work-cont h1{
+        font-size: 24px;
+    }
+
+    .lets-work-cont span{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    /* .resume-btn-contact-btn{
+        justify-content: space-between;
+        padding: 0px 0px;
+    } */
+
+    .resume-btn{
+        padding: 8px 10px;
+        margin-right: 20px;
+        display: flex;
+        padding: 13px 40px;
+        background-color: var(--txt-color);
+        color: var(--bd-color);
+        margin-right: 20px;
+        font-size: 14px;
+        border-radius: 50px;
+        transition: all var(--transition-4) ease;
+        
+    }
+    
+    .contact-btn{
+        display: flex;
+        padding: 13px 35px;
+    }
+
+    /* end let's work responsive */
+
+   
+
+    .social-platforms{
+        padding: 0px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .social-platform1,.social-platform2,.social-platform3,.social-platform4,
+    .social-platform5,.social-platform6,.social-platform7,.social-platform8, a{
+        max-width: 160px;
+    }
+
+     /* social-platform responsive */
+
+
+    /* footer responsive */
+
+    footer{
+        width: 100%;
+        padding: 0px 20px;
+        text-align: center;
+    }
+
+    footer p{
+        font-size: 12px;
+        line-height: 23px;
+    }
+
+
+}
+
+@media (max-width: 425px) {
+
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
+
+    /* nav bar responsive */
+    .nav-header{
+        padding: 0px 20px;
+        top: 88%;
+        width: 100%;
+    }
+    nav{
+        height: 50px;
+        padding: 0px 5px;
+    }
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
+        display: none;
+    }
+
+    .mode-change {
+        margin-left: 8px;
+    }
+
+    .logo a span{
+       display: none;
+       
+    }
+
+    .logo img{
+        width: 40px;
+    }
+
+    /* work container responsive */
+
+    .projects{
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    /* word container responsive end */
+
+
+
+    /* work-box container responsive */
+
+    .work-one-bx{
+        width: 100%;
+    }
+    /* work-box container responsive end */
+
+
+     /* work img container */
+     .work-img{
+        height: 230px;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover; 
+    }
+    /* work img container end */
+    
+    
+    .work-hover{
+        display: none;
+    }
+    /* work-box container responsive end */
+    
+    /* work img container */
+    .work-img{
+        height: 230px;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover; 
+    }
+    /* work img container end */
+
+
+    .work-hover{
+        display: none;
+    }
+    /* work-box container responsive end */
+
+    /* Read more button */
+    .read-more-mobile{
+        display: flex;
+        max-width: 100%;
+        margin-top: 4px;
+    }
+
+    .read-btn svg{
+        width: 30px;
+        height: 30px;
+    }
+    /* Read more button End*/
+
+
+
+    .work-hover{
+        display: none;
+        width: 100%;
+    }
+    
+    /* work-box container responsive end */
+
+    /* work-exp */
+    .work-exp{
+        width: 100%;
+        padding: 0px 20px;
+    }
+    
+
+    
+    .work-exp-label{
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+    }
+    
+    .work-exp-label h1{
+        font-size: 24px;
+    }
+    
+    .work-exp-label i{
+        font-size: 24px;
+    }
+    
+    
+    .comapany-nm-rl{
+        padding: 20px 0px  10px 20px;
+
+    }
+    
+    .company-nm h1{
+        font-size: 24px;
+        font-weight: var(--font-weight-500);
+    }
+    
+    .work-exp-rl{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .work-exp-rl span{
+        margin-right: 0px;
+        font-size: 14px;
+    }
+    
+    .work-exp-rl span li{
+        margin-left: 30px;
+    }
+    
+    .work-exp-desc li{
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+    
+    .circle-nm{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 5.8%;
         
     }
     .circle-nm-2{
@@ -2392,6 +2880,14 @@ footer span{
     }
 
     /* skill container end */
+
+     .tools-container{
+        width: 100%;
+    }
+
+    .tool-box-1{
+        width: 100%;
+    }
 
 
     /* education container */
@@ -2599,48 +3095,32 @@ footer span{
 
 @media (max-width: 375px) {
 
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
 
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 80%;
-        max-width: 100%;
-
+        top: 88%;
+        width: 100%;
     }
     nav{
         height: 50px;
         padding: 0px 5px;
-       
     }
     
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: 10px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .mode-change {
+        margin-left: 8px;
     }
 
     .logo a span{
@@ -2772,7 +3252,7 @@ footer span{
     
     .work-exp-rl span{
         margin-right: 0px;
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .work-exp-rl span li{
@@ -2789,7 +3269,7 @@ footer span{
         width: 20px;
         height: 20px;
         position: absolute;
-        left: 6%;
+        left: 5.8%;
         
     }
     .circle-nm-2{
@@ -2897,6 +3377,14 @@ footer span{
     }
 
     /* skill container end */
+
+     .tools-container{
+        width: 100%;
+    }
+
+    .tool-box-1{
+        width: 100%;
+    }
 
 
     /* education container */
@@ -3086,49 +3574,32 @@ footer span{
 
 @media (max-width: 350px) {
 
+    .cursor-dot,
+    .cursor-outline{
+        display: none;
+    }
 
     /* nav bar responsive */
     .nav-header{
         padding: 0px 20px;
-        top: 80%;
-        max-width: 100%;
-
+        top: 88%;
+        width: 100%;
     }
     nav{
-        width: 100%;
         height: 50px;
         padding: 0px 5px;
-       
     }
     
-    /* nav ul li a .nav-icon{
-        font-size: 16px;
-        vertical-align: middle;
-        margin-right: 6px;
+    .icons{
+        display: flex;
+    }
+
+    .nav-txt{
         display: none;
-    } */
-    
-    nav ul li a .nav-icon{
-        display: flex;
-        margin-right: 0px;
-
     }
 
-    nav ul li{
-        vertical-align: middle;
-        display: flex; 
-    }
-    
-    nav ul li a{
-        font-size: 10px;
-        padding: 10px 10px;
-        height: 48px;
-        margin-left: px;
-        vertical-align: middle;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
+    .mode-change {
+        margin-left: 8px;
     }
 
     .logo a span{
@@ -3179,18 +3650,6 @@ footer span{
         width: 100%;
         padding: 0px 20px;
     }
-
-    /* .work-exp{
-        display: flex;
-        flex-direction: column;
-        width: var(--max-width);
-        padding: 0px 120px;
-        margin-top: 80px;
-        position: relative;
-        height: fit-content;
-        color: var(--txt-color);
-    } */
-    
     
     .work-exp-label{
         display: flex;
@@ -3224,7 +3683,7 @@ footer span{
     
     .work-exp-rl span{
         margin-right: 0px;
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .work-exp-rl span li{
@@ -3241,7 +3700,7 @@ footer span{
         width: 20px;
         height: 20px;
         position: absolute;
-        left: 6%;
+        left: 5.8%;
         
     }
     .circle-nm-2{
@@ -3349,6 +3808,14 @@ footer span{
     }
 
     /* skill container end */
+
+    .tools-container{
+        width: 100%;
+    }
+
+    .tool-box-1{
+        width: 100%;
+    }
 
 
     /* education container */
