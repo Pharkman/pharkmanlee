@@ -8,10 +8,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="/images/thumbnail icon.ico">
     <script src="/JS/index.js" defer></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <link href="https://iconsax.gitlab.io/i/icons.css" rel="stylesheet">
+
     <script type="text/javascript">
     (function(){
         emailjs.init({
@@ -26,54 +28,148 @@
     <section class="nav-header">
         <nav class="glass"> 
         <section class="logo">
-            <a href="index.html"><img class="logo-img"  src="/images/logo-dark.png" alt=""><span>Faruq Arowolo</span></a>
-        </section>
+                <a href="index.html">
+                    <img class="logo-img" src="/images/Light-Logo.png" alt="logo">
+                </a>
+                <span class="custom-tooltip">Home</span>
+                <a href="index.html">
+                    <img class="logo-img-mobile" src="/images/mobilelogo.png" alt="logo">
+                </a>
+            </section>
 
         <ul>
             <section>
-                    <li class="nav-txt"><a href="/work1.html" >Work</a></li>
-                    <a class="icons" href="work1.html"><i class='bx bx-briefcase '></i></a>
+                    <li class="nav-txt"><a href="/work.html" >Work</a></li>
+                    <a class="icons" href="work.html"><i class="iconsax" icon-name="briefcase"></i></a>
                 </section>
                 
                 <section>
-                    <li class="nav-txt"><a href="/aboutme.html">About</a></li>
-                    <a class="icons" href="aboutme.html"><i class='bx bx-user '></i></a>
+                    <li class="nav-txt"><a href="/about.html">About</a></li>
+                    <a class="icons" href="about.html"><i class="iconsax" icon-name="user-1"></i></a>
                 </section>
 
                 <section>
                     <li class="nav-txt"><a href="/contact.html" class="active">Contact</a></li>
-                    <a class="icons active" href="contact.html"><i class='bx bx-phone'></i></a>
+                    <a class="icons active" href="contact.html"><i class="iconsax" icon-name="24hr-service"></i></a>
                 </section>
 
-                <li class="mode-change"><i class='bx bx-moon nav-icon' ></i></li>
+                <li class="mode-change"><i class='bx bx-moon nav-icon mode-icon'></i></li>
         </ul>
         
     </nav>
     </section>
 
 
-    <section class="cursor-dot" data-cursor-dot></section>
-    <section class="cursor-outline" data-cursor-outline=""></section>
-
+    <div class="custom-cursor"></div>
 
     <main>
        
         <section class="contact-cont">
             <section class="contact-hd">
                 <h1>Let’s work together</h1>
-                <span>Open for Collaboration Available for Gig, Full-Time and Part-Time Roles.</span>
+                <span>Open for collaboration & available for gig, full-time and part-time roles.</span>
             </section>
-            <section  class="contact-form">
-                <input type="text" placeholder="Name" class="name" id="name" required>
-                <span class="error-msg">Erro</span>
-                <input type="email" placeholder="Email" class="name" id="email" required>
-                <span class="error-msg">Erro</span>
-                <input type="text" placeholder="Subject" class="name" id="subject" required>
-                <span class="error-msg">Erro</span>
-                <textarea type="text" placeholder="Message" class="message" id="message" required></textarea>
-                <span class="error-msg">Erro</span>
-                <button class="contact-form-btn" onclick="sendMail()">Send A Message</button>
+
+
+            <section class="contact-hr-container">
+                <section class="working-hr-contact">
+
+                    <section class="working-hr">
+                        <section class="profile-name">
+                            <section class="profile-img">
+                                
+                            </section>
+                            <section class="hrs-available">
+                                <button class="avalaible-btn">
+                                    <section class="avalaible-circle">
+                                        <section class="circle-1 circle-1-blink">
+                                        </section>
+                                        <section class="circle-2"></section>
+                                    </section>
+                                    Available for work
+                                </button>
+
+                                <section class="my-name-rol">
+                                    <span class="myName">Faruq Arowolo</span>
+                                    <span class="myRole">Designer & Developer</span>
+                                </section>
+                            </section>
+                        </section>
+
+                        <section class="myWorkingHr">
+                            <span>Working Hours (GMT+)</span>
+                            <span>6AM - 8PM</span>
+                        </section>
+                    </section>
+
+                    <section class="social-contact">
+                        <a class="contacts-links" href="https://wa.me/2348167078285?text= " target="_blank">
+                            <section class="wep-contact">
+                                <section class="contact-img-na">
+                                    <section class="contact-img">
+                                        <img src="images/tools/whatsapp.webp" alt="">
+                                    </section>
+                                    <span>Whatsapp</span>
+                                </section>
+
+                                <span class="material-icons">north_east</span>
+                                
+                            </section>
+                        </a>
+                        
+                        <a class="contacts-links" href="mailto:pharkmanlee@gmail.com" target="_blank">
+                            <section class="wep-contact">
+                                <section class="contact-img-na">
+                                    <section class="contact-img">
+                                        <img src="images/tools/gmail.webp" alt="">
+                                    </section>
+                                    <span>Gmail</span>
+                                </section>
+
+                                <span class="material-icons">north_east</span>
+                                
+                            </section>
+                        </a>
+                        
+                        <a class="contacts-links" href="tel:+2348167078285" target="_blank">
+                            <section class="wep-contact">
+                                <section class="contact-img-na">
+                                    <section class="contact-img">
+                                        <img src="images/tools/phone.png" alt="">
+                                    </section>
+                                    <span>Phone Call</span>
+                                </section>
+
+                                <span class="material-icons">north_east</span>
+                                
+                            </section>
+                        </a>
+                        
+                    </section>
+
+                    
+                </section>
+                <section class="contact-form">
+                    <input type="text" placeholder="Name" class="name" id="name" name="name" required>
+                    <span class="error-msg" id="nameError"></span>
+                    
+                    <input type="email" placeholder="Email" class="name" id="email" name="email" required>
+                    <span class="error-msg" id="emailError"></span>
+                    
+                    <input type="text" placeholder="Subject" class="name" id="subject" name="subject" required>
+                    <span class="error-msg" id="subjectError"></span>
+                    
+                    <textarea placeholder="Message" class="message" id="message" name="message" required></textarea>
+                    <span class="error-msg" id="messageError"></span>
+                    
+                    <button class="contact-form-btn" onclick="sendMail()">Send A Message</button>
+                    
+                    <div class="alert-message" id="formAlert"></div>
+                </section>
+
+            
             </section>
+
         </section>
 
 
@@ -83,75 +179,27 @@
                 <p>I would love to hear from you, so please feel free to reach out.</p>
             </article>
 
-            <article class="resume-btn-contact-btn">
-                <a class="resume-btn" href="https://drive.google.com/file/d/1grmsuaJomwKBo_DjEZkMKJipkGqN03pa/view?usp=drive_link" target="_blank">CV/Resume</a>
-                <a class="contact-btn" href="contact.html">Hire me</a>
+            <article class="resume-btn-contact-btn js-lets-work">
+
             </article>
-        </section>
-
-        <section class="social-platforms">
-            <section class="social-platform1">
-                <a href="https://www.linkedin.com/in/faruq-arowolo-4465461a8" target="_blank">
-                    <i class='bx bxl-linkedin-square' style="font-size: 24px;"></i>Linkedin
-                </a>
-            </div>
-            </section>
-
-            <section class="social-platform2">
-                <a href="https://twitter.com/Pharkman_" target="_blank">
-                    <i class='bx bxl-twitter' style="font-size: 24px;" ></i>Twitter
-                </a>
-
-            </section>
-
-            <section class="social-platform3">
-                <a href="https://www.instagram.com/pharkmanlee/" target="_blank">
-                    <i class='bx bxl-instagram-alt' style="font-size: 24px;"></i>Instagram
-                </a>
-
-            </section>
-
-            <section class="social-platform4">
-                <a href="https://m.facebook.com/public/Faruq-Arowolo phar" target="_blank">
-                    <i class='bx bxl-facebook-circle' style="font-size: 24px;" ></i>Facebook
-                </a>
-
-            </section>
-
-            <section class="social-platform5">
-                <a href="https://www.behance.net/faruqsola" target="_blank">
-                    <i class='bx bxl-behance' style="font-size: 24px;"></i>Behance
-                </a>
-
-            </section>
-
-            <section class="social-platform6">
-                <a href="https://dribbble.com/Pharkmanlee" target="_blank">
-                    <i class='bx bxl-dribbble' style="font-size: 24px;"></i>Dribble
-                </a>
-
-            </section>
-
-            <section class="social-platform7">
-                <a href="https://github.com/Pharkman" target="_blank">
-                    <i class='bx bxl-github' style="font-size: 24px;"></i>GitHub
-                </a>
-
-            </section>
-
-            <section class="social-platform8">
-                <a href="https://discordapp.com/users/945779063111438436" target="_blank"> <i class='bx bxl-discord-alt' style="font-size: 24px;"></i>Discord
-                    
-                </a>
-            </section>
-
         </section>
 
     </main> 
 
-    <footer>
-        <p>&copy;2024 <span>Design and Developed by Faruqarowolo.</span>  All Rights Reserved.</p>
+
+    <footer class="js-all-socail-links">
+        
     </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="iconsax" icon-name="chevron-up"></i>
+    </button>
+    
+    <script src="Data/time.js"></script>
+    <script src="Data/scroll-btn.js"></script>
+    <script src="script/animation.js"></script>
+    <script src="Data/lets-work.js"></script>
+    <script src="Data/footer.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="contact.js"></script>
 

@@ -1,5 +1,5 @@
 const work = document.querySelector(".works-pro");
-const btns = document.querySelectorAll(".uiux-btn");
+const btns = document.querySelectorAll(".filter-btn");
 const articles = document.querySelectorAll(".content");
 work.addEventListener("click", function (e) {
   const id = e.target.dataset.id;
@@ -17,3 +17,5 @@ work.addEventListener("click", function (e) {
     element.classList.add("active");
   }
 });
+
+
