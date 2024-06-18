@@ -1,5 +1,5 @@
 const aboutme =[{
-  Image: 'images/about.jpg',
+  Image: '/images/about.JPG',
   heading: "I'm Faruq Arowolo, a multidisciplinary designer based in Nigeria.",
   paragraph1: 'As a skilled Product Designer and Frontend Developer, I am passionate about creating mobile apps and websites. With over 3 years of experience in the field and a degree in computer science, my expertise lies in merging UI/UX design with frontend development to craft seamless, engaging, and user-friendly digital experiences. My goal is to captivate and engage users through meticulously designed interfaces and interactions, making technology feel more intuitive and accessible.',
   paragraph2: 'I have worked on various projects in UI/UX, web design, branding and identity, and graphics design. I thrive in collaborative environments and love experimenting with new tools and techniques to enhance my design process.',
