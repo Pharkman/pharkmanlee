@@ -10,7 +10,7 @@ const favquotes = [
 
   { 
     id: 1,
-    Image: '/images/lil Wayne.JPG',
+    Image: '/images/lil-Wayne.JPG',
     name: 'Lil Wayne',
     role: 'Artiste',
     heading: '',
