@@ -1,7 +1,7 @@
 const favquotes = [
   { 
     id: 1,
-    Image: '/images/juice-wrld.JPG',
+    Image: '/images/juice-wrld.jpg',
     name: 'Juice WRLD',
     role: 'Artiste',
     heading: '999',
@@ -10,7 +10,7 @@ const favquotes = [
 
   { 
     id: 1,
-    Image: '/images/lil-Wayne.JPG',
+    Image: '/images/lil-Wayne.jpg',
     name: 'Lil Wayne',
     role: 'Artiste',
     heading: '',
@@ -19,7 +19,7 @@ const favquotes = [
 
   { 
     id: 1,
-    Image: '/images/cristiano-ronaldo.JPG',
+    Image: '/images/cristiano-ronaldo.jpg',
     name: 'Cristiano Ronaldo',
     role: 'Footballer',
     heading: '',
