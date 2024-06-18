@@ -15,7 +15,7 @@ const displayproject = [
     toc11: 'UI Design',
     toc12: '',
     introworkdesc: 'A User-Centric UI/UX Design Project for Enhanced Accessibility and Health Engagement',
-    introworkcoverimage: '/images/projects/mediScan uiux.png',
+    introworkcoverimage: '/images/mediScan uiux.png',
     role1: 'UI Designer',
     role2: 'UX Designer',
     role3: 'Branding', 
@@ -44,21 +44,21 @@ const displayproject = [
     solutionimage: '',
 
     designprocesstxt: '',
-    designprocessimage: 'images/projects/Mediscan designprocess.png',
+    designprocessimage: 'images//Mediscan designprocess.png',
     researchtxt: '',
-    researchimage: 'images/projects/Mediscan research.png',
+    researchimage: 'images//Mediscan research.png',
     
-    competitorimage: '/images/projects/Mediscan Competitor.png',
+    competitorimage: '/images/Mediscan Competitor.png',
 
     informationarctxt: '',
-    informationarcimage: 'images/projects/Mediscan information.png',
+    informationarcimage: 'images/Mediscan information.png',
 
     userflowtxt: '',
-    userflowimage: 'images/projects/Mediscan userpersona.png',
+    userflowimage: 'images/Mediscan userpersona.png',
     wireframetxt: '',
-    wireframeimage: 'images/projects/Mediscan wireframe.png',
+    wireframeimage: 'images/Mediscan wireframe.png',
     uidesigntxt: '',
-    uidesignimage: 'images/projects/Mediscan uidesign.png',
+    uidesignimage: 'images/Mediscan uidesign.png',
     usabilitytestingtxt: '',
     usabilitytestingimage: '',
   },
@@ -99,7 +99,7 @@ const displayproject = [
     toc11: 'UI Design',
     toc12: 'Dark Mode',
     introworkdesc: 'MatchSingle, a dating app designed to streamline real connections ',
-    introworkcoverimage: '/images/projects/Matchsignle uiux.png',
+    introworkcoverimage: '/images/Matchsignle uiux.png',
     role1: 'UI Designer',
     role2: 'UX Designer',
     role3: 'Branding', 
@@ -118,37 +118,37 @@ const displayproject = [
     
     overviewtxt: "",
 
-    overviewimage: 'images/projects/Matchsingle overview.png',
+    overviewimage: 'images/Matchsingle overview.png',
 
     problemstatementtxt: "",
 
-    problemstatementimage: 'images/projects/Matchsingle problem.png',
+    problemstatementimage: 'images/Matchsingle problem.png',
 
     solutiontxt: '',
 
-    solutionimage: 'images/projects/Matchsingle solution.png',
+    solutionimage: 'images/Matchsingle solution.png',
     designprocesstxt: '',
-    designprocessimage: 'images/projects/Matchsingle designprocess.png',
+    designprocessimage: 'images/Matchsingle designprocess.png',
 
     researchtxt: '',
-    researchimage: 'images/projects/Matchsingle research.png',
+    researchimage: 'images/Matchsingle research.png',
     
-    competitorimage: '/images/projects/matchsingle userpersona.png',
+    competitorimage: '/images/matchsingle userpersona.png',
 
     informationarctxt: '',
-    informationarcimage: '/images/projects/Matchsingle information.png',
+    informationarcimage: '/images/Matchsingle information.png',
     
     userflowtxt: '',
-    userflowimage: '/images/projects/Matchsingle competitor.png',
+    userflowimage: '/images/Matchsingle competitor.png',
 
     wireframetxt: '',
-    wireframeimage: '/images/projects/Matchsingle wireframe.png',
+    wireframeimage: '/images/Matchsingle wireframe.png',
 
     uidesigntxt: '',
-    uidesignimage: '/images/projects/Matchsingle uidesign.png',
+    uidesignimage: '/images/Matchsingle uidesign.png',
 
     usabilitytestingtxt: '',
-    usabilitytestingimage: '/images/projects/Matchsingle darkmode.png',
+    usabilitytestingimage: '/images/Matchsingle darkmode.png',
   },
 
   {
@@ -167,7 +167,7 @@ const displayproject = [
     toc11: 'UI Design',
     toc12: '',
     introworkdesc: 'Empowering Agriculture Through Innovation, Introducing FarmWise an app that connect farmers and  manage resources',
-    introworkcoverimage: '/images/projects/Farmwise uiux.png',
+    introworkcoverimage: '/images/Farmwise uiux.png',
     role1: 'UI Designer',
     role2: 'UX Designer',
     role3: 'Branding', 
@@ -190,18 +190,18 @@ const displayproject = [
 
     problemstatementtxt: 'Traditional agricultural practices often leave farmers isolated and lacking access to essential resources and information. Farmers struggle to connect with peers, receive accurate weather forecasts, stay informed about industry news, access fair market prices, track their farm activities, and efficiently manage their operations. The absence of a comprehensive solution results in reduced productivity, uninformed decision-making, and limited growth opportunities within the agricultural sector.',
 
-    problemstatementimage: '/images/projects/farmwise problem.png',
+    problemstatementimage: '/images/farmwise problem.png',
 
     solutiontxt: 'FarmWise addresses these challenges by introducing an all-encompassing mobile application that empowers farmers with a unified platform. The application facilitates networking among farmers, providing a space for collaboration and knowledge-sharing. Real-time weather updates offer accurate forecasts, enabling farmers to optimize their tasks based on weather conditions. Current news updates keep farmers informed about industry trends and innovations, promoting modernization. The buy and sell feature establishes a direct marketplace, connecting farmers with consumers and ensuring equitable pricing.',
 
-    solutionimage: '/images/projects/farmwise solution.png',
+    solutionimage: '/images/farmwise solution.png',
 
     designprocesstxt: 'My design approach unfolds in five carefully structured stages, forming the backbone of my  solutiont my efforts are not only purposeful but also aligned with the overarching goals also generate ideas bases on research so to come with a solution.',
 
-    designprocessimage: '/images/projects/farmwise design process.png',
+    designprocessimage: '/images/farmwise design process.png',
 
     researchtxt: '',
-    researchimage: 'images/projects/farmwise persona.png',
+    researchimage: 'images/farmwise persona.png',
 
     competitor: '',
     competitor2: '',
@@ -218,18 +218,18 @@ const displayproject = [
     competitor1comparison3: '',
     competitor1comparison4: '',
 
-    competitorimage: 'images/projects/farmwise userempathy.png',
+    competitorimage: 'images/farmwise userempathy.png',
     
     informationarctxt: '',
-    informationarcimage: 'images/projects/farmwise Surveyquestion.png',
+    informationarcimage: 'images/farmwise Surveyquestion.png',
 
     userflowtxt: '',
-    userflowimage: 'images/projects/farmwise userflow.png',
+    userflowimage: 'images/farmwise userflow.png',
 
     wireframetxt: '',
-    wireframeimage: 'images/projects/farmwise Wireframe.png',
+    wireframeimage: 'images/farmwise Wireframe.png',
     uidesigntxt: '',
-    uidesignimage: 'images/projects/farmwise uidesign.png',
+    uidesignimage: 'images/farmwise uidesign.png',
     usabilitytestingtxt: '',
     usabilitytestingimage: 'UX Research',
   },
@@ -255,7 +255,7 @@ const displayproject = [
     toc11: 'UI Design',
     toc12: '',
     introworkdesc: 'GadgetFix App: Designed to Connect Users with Skilled Technicians for Seamless Repairs',
-    introworkcoverimage: '/images/projects/Gadget uiux.png',
+    introworkcoverimage: '/images/Gadget uiux.png',
     role1: 'UI Designer',
     role2: 'UX Designer',
     role3: 'Branding', 
@@ -275,24 +275,24 @@ const displayproject = [
 
     overviewimage: 'UX Research',
     problemstatementtxt: '',
-    problemstatementimage: 'images/projects/Gadget Problem.png',
+    problemstatementimage: 'images/Gadget Problem.png',
     solutiontxt: '',
-    solutionimage: 'images/projects/Gadget solution.png',
+    solutionimage: 'images/Gadget solution.png',
     designprocesstxt: '',
-    designprocessimage: 'images/projects/Gadget designprocess.png',
+    designprocessimage: 'images/Gadget designprocess.png',
     researchtxt: '',
-    researchimage: 'images/projects/Gadget research.png',
+    researchimage: 'images/Gadget research.png',
 
     
-    competitorimage: '/images/projects/Gadget competitor.png',
+    competitorimage: '/images/Gadget competitor.png',
     informationarctxt: '',
-    informationarcimage: '/images/projects/Gadget information.png',
+    informationarcimage: '/images/Gadget information.png',
     userflowtxt: '',
-    userflowimage: '/images/projects/Gadget userpersona.png',
+    userflowimage: '/images/Gadget userpersona.png',
     wireframetxt: '',
-    wireframeimage: '/images/projects/Gadget wireframe.png',
+    wireframeimage: '/images/Gadget wireframe.png',
     uidesigntxt: '',
-    uidesignimage: '/images/projects/Gadget uidesign.png',
+    uidesignimage: '/images/Gadget uidesign.png',
     usabilitytestingtxt: '',
     usabilitytestingimage: '',
   },

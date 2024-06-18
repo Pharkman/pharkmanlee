@@ -1,20 +1,9 @@
-  // images/projects/Decor uiux.png
-  // 
-  
-  
-  
-  // images/projects/Gadget uiux.png  
-  // images/projects/Inno uiux.png  
-  // images/projects/Marketpadi uiux.png
-  // images/projects/Marketplace uiux.png
-  
-  
   
 const projects =[
   {
     id: 1,
     category: 'uiux',
-    image: 'images/projects/mediScan uiux.png',
+    image: 'images/mediScan uiux.png',
     name: 'MediScan',
     year: '2024',
     sector: 'Medical',
@@ -27,7 +16,7 @@ const projects =[
   {
     id: 2,
     category: 'webdev',
-    image: 'images/projects/Fintech Webdev.png',
+    image: 'images/Fintech Webdev.png',
     name: 'FarmWise',
     year: '2024',
     sector: 'Fintech',
@@ -40,7 +29,7 @@ const projects =[
   {
     id: 3,
     category: 'uiux',
-    image: 'images/projects/Marketpadi uiux.png',
+    image: 'images/Marketpadi uiux.png',
     name: 'Market Padi',
     year: '2024',
     sector: 'Service',
@@ -53,7 +42,7 @@ const projects =[
   {
     id: 4,
     category: 'branddesign',
-    image: 'images/projects/vortex brand.png',
+    image: 'images/vortex brand.png',
     name: 'Vortex',
     year: '2024',
     sector: 'Fitness',
@@ -66,7 +55,7 @@ const projects =[
   {
     id: 5,
     category: 'webdev',
-    image: 'images/projects/Weather webdev.png',
+    image: 'images/Weather webdev.png',
     name: 'Weather App',
     year: '2023',
     sector: 'Technology',
@@ -79,7 +68,7 @@ const projects =[
   {
     id: 6,
     category: 'uiux',
-    image: 'images/projects/Matchsignle uiux.png',
+    image: 'images/Matchsignle uiux.png',
     name: 'Matchsignle',
     year: '2023',
     sector: 'Dating',
@@ -93,7 +82,7 @@ const projects =[
   {
     id: 7,
     category: 'uiux',
-    image: 'images/projects/Farmwise uiux.png',
+    image: 'images/Farmwise uiux.png',
     name: 'FarmWise',
     year: '2024',
     sector: 'Agriculture',
@@ -105,7 +94,7 @@ const projects =[
   {
     id: 8,
     category: 'uiux',
-    image: 'images/projects/Cloudclinic.png',
+    image: 'images/Cloudclinic.png',
     name: 'Cloudclinic',
     year: '2024',
     sector: 'Health',
@@ -118,7 +107,7 @@ const projects =[
   {
     id: 9,
     category: 'uiux',
-    image: 'images/projects/gadget uiux.png  ',
+    image: 'images/gadget uiux.png  ',
     name: 'Gadgetfix',
     year: '2024',
     sector: 'Tech',
@@ -131,7 +120,7 @@ const projects =[
   {
     id: 10,
     category: 'uiux',
-    image: 'images/projects/Inno.png  ',
+    image: 'images/Inno.png  ',
     name: 'InnoVista',
     year: '2024',
     sector: 'Tech',
@@ -144,7 +133,7 @@ const projects =[
   {
     id: 11,
     category: 'uiux',
-    image: 'images/projects/Marketplace uiux.png  ',
+    image: 'images/Marketplace uiux.png  ',
     name: 'Eevent',
     year: '2024',
     sector: 'Service',
@@ -157,7 +146,7 @@ const projects =[
   {
     id: 12,
     category: 'uiux',
-    image: 'images/projects/E-learning uiux.png  ',
+    image: 'images/E-learning uiux.png  ',
     name: 'E-learning',
     year: '2024',
     sector: 'Education',
@@ -170,7 +159,7 @@ const projects =[
   {
     id: 13,
     category: 'uiux',
-    image: 'images/projects/decor uiux.png  ',
+    image: 'images/decor uiux.png  ',
     name: 'EliteDecor',
     year: '2024',
     sector: 'E-commerce',
