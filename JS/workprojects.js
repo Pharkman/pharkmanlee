@@ -160,7 +160,7 @@
   {
     id: 13,
     category: 'uiux',
-    image: './images/decor uiux.png',
+    image: './images/Decor uiux.png',
     name: 'EliteDecor',
     year: '2023',
     sector: 'E-commerce',
