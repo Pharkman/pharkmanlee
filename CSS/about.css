@@ -6,10 +6,10 @@
 
 @font-face {
     font-family: 'Acorn';
-    src: url('/font/Acorn-Light.eot');
-    src: url('/font/Acorn-Light.eot?#iefix') format('embedded-opentype'),
+    src: url('./font/Acorn-Light.eot');
+    src: url('./font/Acorn-Light.eot?#iefix') format('embedded-opentype'),
          url('/font/Acorn-Light.woff2') format('woff2'),
-         url('/font/Acorn-Light.woff') format('woff'),
+         url('./font/Acorn-Light.woff') format('woff'),
          url('/font/Acorn-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
@@ -801,7 +801,7 @@ nav ul li a.active{
 .heading-intro-txt h1{
     font-size: var(--heading-2-32);
     color: var(--txt-color);
-    font-family: 'acorn';
+    font-family: 'Acorn';
     line-height: 2.5rem;
 }
 
@@ -833,7 +833,6 @@ nav ul li a.active{
     font-weight: 400;
     color: var(--txt-color);
     border-radius: 2.5px;
-    font-family: 'acorn';
 }
 
 .resume-btn-contact-btn{
