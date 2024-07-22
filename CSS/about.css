@@ -622,7 +622,6 @@ nav ul li a{
     border-radius: 0.17rem;
     margin: 0rem 0.94rem;
     width: 5rem;
-    font-family: 'Acorn';
 }
 
 nav ul li a:hover{
@@ -801,7 +800,6 @@ nav ul li a.active{
 .heading-intro-txt h1{
     font-size: var(--heading-2-32);
     color: var(--txt-color);
-    font-family: 'Acorn';
     line-height: 2.5rem;
 }
 
