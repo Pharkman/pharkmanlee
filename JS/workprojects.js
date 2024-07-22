@@ -2,7 +2,7 @@
   {
     id: 1,
     category: 'uiux',
-    image: 'images/mediScan uiux.png',
+    image: './images/mediScan uiux.png',
     name: 'MediScan',
     year: '2024',
     sector: 'Medical',
@@ -15,7 +15,7 @@
   {
     id: 2,
     category: 'webdev',
-    image: 'images/Fintech Webdev.png',
+    image: './images/Fintech Webdev.png',
     name: 'Oaypay',
     year: '2024',
     sector: 'Fintech',
@@ -29,7 +29,7 @@
   {
     id: 3,
     category: 'uiux',
-    image: 'images/Marketpadi uiux.png',
+    image: './images/Marketpadi uiux.png',
     name: 'Market Padi',
     year: '2024',
     sector: 'Service',
@@ -55,7 +55,7 @@
   {
     id: 5,
     category: 'webdev',
-    image: 'images/Weather webdev.png',
+    image: './images/Weather webdev.png',
     name: 'Weather App',
     year: '2023',
     sector: 'Technology',
@@ -69,7 +69,7 @@
   {
     id: 6,
     category: 'uiux',
-    image: 'images/Matchsignle uiux.png',
+    image: './images/Matchsignle uiux.png',
     name: 'Matchsignle',
     year: '2023',
     sector: 'Dating',
@@ -83,7 +83,7 @@
   {
     id: 7,
     category: 'uiux',
-    image: 'images/Farmwise uiux.png',
+    image: './images/Farmwise uiux.png',
     name: 'FarmWise',
     year: '2023',
     sector: 'Agriculture',
@@ -95,7 +95,7 @@
   {
     id: 8,
     category: 'uiux',
-    image: 'images/Cloudclinic.png',
+    image: './images/Cloudclinic.png',
     name: 'Cloudclinic',
     year: '2024',
     sector: 'Health',
@@ -108,7 +108,7 @@
   {
     id: 9,
     category: 'uiux',
-    image: 'images/gadget uiux.png  ',
+    image: './images/Gadget uiux.png',
     name: 'Gadgetfix',
     year: '2023',
     sector: 'Tech',
@@ -121,7 +121,7 @@
   {
     id: 10,
     category: 'uiux',
-    image: 'images/Inno.png  ',
+    image: './images/Inno.png',
     name: 'InnoVista',
     year: '2024',
     sector: 'Tech',
@@ -134,7 +134,7 @@
   {
     id: 11,
     category: 'uiux',
-    image: 'images/Marketplace uiux.png  ',
+    image: './images/Marketplace uiux.png',
     name: 'Eevent',
     year: '2024',
     sector: 'Service',
@@ -147,7 +147,7 @@
   {
     id: 12,
     category: 'uiux',
-    image: 'images/E-learning uiux.png  ',
+    image: './images/E-learning uiux.png',
     name: 'E-learning',
     year: '2024',
     sector: 'Education',
@@ -160,7 +160,7 @@
   {
     id: 13,
     category: 'uiux',
-    image: 'images/decor uiux.png  ',
+    image: './images/decor uiux.png',
     name: 'EliteDecor',
     year: '2023',
     sector: 'E-commerce',
