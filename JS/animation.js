@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.work-cont', { delay: 500 });
     sr.reveal('.img1', { scale: 0.85, delay: 300 });
     sr.reveal('.comapany-experiences', { interval: 200 });
-    sr.reveal('.js-all-skills', { interval: 200 });
-    sr.reveal('.js-all-tools', { interval: 200 });
     sr.reveal('.schools-details', { interval: 200 });
     sr.reveal('.js-ppl-wrds', { interval: 200 });
     sr.reveal('.js-favquotes', { interval: 200 });
