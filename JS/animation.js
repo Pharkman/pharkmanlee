@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sr.reveal('.half-img1', { scale: 0.85, delay: 400 });
             sr.reveal('.half-img2', { scale: 0.85, delay: 500 });
             sr.reveal('.comapany-experiences', { interval: 200 });
-            sr.reveal('.js-all-skills', { interval: 200 });
-            sr.reveal('.js-all-tools', { interval: 200 });
             sr.reveal('.schools-details', { interval: 200 });
             sr.reveal('.js-ppl-wrds', { interval: 200 });
             sr.reveal('.js-favquotes', { interval: 200 });
