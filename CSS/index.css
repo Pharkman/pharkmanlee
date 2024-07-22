@@ -570,7 +570,6 @@ body{
 
 .cursor-text {
   font-size: 24px;
-  font-family: 'acorn';
 }
 
 
@@ -777,7 +776,6 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     margin-bottom: 1.25rem;
-    font-family: 'Acorn';
 }
 
 .avalaible-circle{
@@ -837,7 +835,6 @@ nav ul li a:hover{
     align-items: center;
     height: 40px;
     color: var(--txt-color);
-    font-family: 'Acorn';
 }
 
 .hand-wave{
@@ -1041,7 +1038,6 @@ nav ul li a:hover{
     border-radius: var(--border-radius-5);
     color: var(--txt-color);
     cursor: pointer;
-    font-family: 'acorn';
 }
  
 .all-project-container, .all-skills-container{
