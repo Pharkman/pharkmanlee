@@ -1,5 +1,4 @@
-  
-const projects =[
+  const projects =[
   {
     id: 1,
     category: 'uiux',
