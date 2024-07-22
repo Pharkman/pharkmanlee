@@ -775,7 +775,7 @@ nav ul li a:hover{
 .profile-img{
     width: 150px;
     height: 150px;
-    background-image: url('/images/Profile.png');
+    background-image: url('./images/profile.png');
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
