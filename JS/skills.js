@@ -8,7 +8,7 @@ const skills = [
 
   {
     id: 2,
-    image:'images/skills/ux.png',
+    image:'images/skills/Ux.png',
     skill: 'UX Design',
     skilldescr: ''
   },
