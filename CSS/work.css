@@ -532,7 +532,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: Bricolage Grotesque, 'Acorn';
+    font-family: Bricolage Grotesque, Acorn;
 }
 
 html{
@@ -544,7 +544,7 @@ body{
     overflow-x: hidden;
     overflow-x: hidden;
     cursor: none;
-    font-family: Bricolage Grotesque, 'Acorn';
+    font-family: Bricolage Grotesque, Acorn;
 }
 
 
@@ -855,7 +855,7 @@ nav ul li a.active{
     font-size: var(--paragraph-2-14);
     border-radius: var(--border-radius-5);
     color: var(--txt-color);
-    font-family: 'acorn';
+    font-family: acorn;
     cursor: pointer;
 }
  
