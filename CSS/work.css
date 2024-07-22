@@ -560,9 +560,6 @@ body{
     z-index: 9999;
 }
 
-
-
-
 .nav-header{
     padding: var(--padding);
     display: flex;
@@ -855,7 +852,6 @@ nav ul li a.active{
     font-size: var(--paragraph-2-14);
     border-radius: var(--border-radius-5);
     color: var(--txt-color);
-    font-family: acorn;
     cursor: pointer;
 }
  
