@@ -10,9 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.hero-text', { delay: 300 });
     sr.reveal('.sub-heading', { delay: 500 });
     sr.reveal('.completed-pro', { interval: 200 });
-    sr.reveal('.work-label', { origin: 'left', distance: '100px' });
     sr.reveal('.filter-btn', { scale: 0.85, interval: 200 });
-    sr.reveal('.lets-work h1', { delay: 300 });
     sr.reveal('.project-container', { scale: 0.85, delay: 300 });
     sr.reveal('.hello-btn', { delay: 300 });
     sr.reveal('.about-me-cont p', { delay: 500 });
