@@ -2,7 +2,7 @@
   {
     id: 1,
     category: 'uiux',
-    image: './images/mediScan uiux.png',
+    image: 'images/mediScan uiux.png',
     name: 'MediScan',
     year: '2024',
     sector: 'Medical',
@@ -15,7 +15,7 @@
   {
     id: 2,
     category: 'webdev',
-    image: './images/Fintech Webdev.png',
+    image: 'images/Fintech Webdev.png',
     name: 'Oaypay',
     year: '2024',
     sector: 'Fintech',
@@ -29,7 +29,7 @@
   {
     id: 3,
     category: 'uiux',
-    image: './images/Marketpadi uiux.png',
+    image: 'images/Marketpadi uiux.png',
     name: 'Market Padi',
     year: '2024',
     sector: 'Service',
@@ -55,7 +55,7 @@
   {
     id: 5,
     category: 'webdev',
-    image: './images/Weather webdev.png',
+    image: 'images/Weather webdev.png',
     name: 'Weather App',
     year: '2023',
     sector: 'Technology',
@@ -69,7 +69,7 @@
   {
     id: 6,
     category: 'uiux',
-    image: './images/Matchsignle uiux.png',
+    image: 'images/Matchsignle uiux.png',
     name: 'Matchsignle',
     year: '2023',
     sector: 'Dating',
@@ -83,7 +83,7 @@
   {
     id: 7,
     category: 'uiux',
-    image: './images/Farmwise uiux.png',
+    image: 'images/Farmwise uiux.png',
     name: 'FarmWise',
     year: '2023',
     sector: 'Agriculture',
@@ -95,7 +95,7 @@
   {
     id: 8,
     category: 'uiux',
-    image: './images/Cloudclinic.png',
+    image: 'images/Cloudclinic.png',
     name: 'Cloudclinic',
     year: '2024',
     sector: 'Health',
@@ -121,7 +121,7 @@
   {
     id: 10,
     category: 'uiux',
-    image: './images/Inno.png',
+    image: 'images/Inno.png  ',
     name: 'InnoVista',
     year: '2024',
     sector: 'Tech',
@@ -134,7 +134,7 @@
   {
     id: 11,
     category: 'uiux',
-    image: './images/Marketplace uiux.png',
+    image: 'images/Marketplace uiux.png  ',
     name: 'Eevent',
     year: '2024',
     sector: 'Service',
@@ -147,7 +147,7 @@
   {
     id: 12,
     category: 'uiux',
-    image: './images/E-learning uiux.png',
+    image: 'images/E-learning uiux.png  ',
     name: 'E-learning',
     year: '2024',
     sector: 'Education',
@@ -234,8 +234,6 @@ function displayAllProjects(allProjects){
             </div>
           </section>
 
-          
-
           <section class="project-name-tag">
             <section>
               <span class="project-name">${works.name}</span>
@@ -247,7 +245,7 @@ function displayAllProjects(allProjects){
           </section>
         </section>
       `;
-    } else {
+    } else if (works.projectlink) {
       return `
         <section class="project-container">
           <section class="project-image">
@@ -260,6 +258,37 @@ function displayAllProjects(allProjects){
                 ${projectLinks}
               </div>
             </div>
+          </section>
+          <section class="project-name-tag">
+            <section>
+              <span class="project-name">${works.name}</span>
+            </section>
+            <section class="project-tags">
+              <span class="project-sector">${works.sector}</span>
+              <span class="project-category">${works.project}</span>
+            </section>
+          </section>
+        </section>
+      `;
+    } else {
+       return `
+        <section class="project-container">
+          <section class="project-image">
+            <img src="${works.image}">
+            <section class="project-year">
+              <span>${works.year}</span>
+            </section>
+
+            <div class="link-to">
+              <div class="link-hover-container">
+                <a href="display.html?id=${works.id}">
+                  <section class="project-hover">
+                    <span class="material-icons">north_east</span>
+                  </section>
+                </a>
+              </div>
+            </div>
+
           </section>
           <section class="project-name-tag">
             <section>
