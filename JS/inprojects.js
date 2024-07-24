@@ -154,8 +154,6 @@ function displayAllProjects(allProjects){
             </div>
           </section>
 
-          
-
           <section class="project-name-tag">
             <section>
               <span class="project-name">${works.name}</span>
@@ -167,7 +165,7 @@ function displayAllProjects(allProjects){
           </section>
         </section>
       `;
-    } else {
+    } else if (works.projectlink) {
       return `
         <section class="project-container">
           <section class="project-image">
@@ -180,6 +178,37 @@ function displayAllProjects(allProjects){
                 ${projectLinks}
               </div>
             </div>
+          </section>
+          <section class="project-name-tag">
+            <section>
+              <span class="project-name">${works.name}</span>
+            </section>
+            <section class="project-tags">
+              <span class="project-sector">${works.sector}</span>
+              <span class="project-category">${works.project}</span>
+            </section>
+          </section>
+        </section>
+      `;
+    } else {
+       return `
+        <section class="project-container">
+          <section class="project-image">
+            <img src="${works.image}">
+            <section class="project-year">
+              <span>${works.year}</span>
+            </section>
+
+            <div class="link-to">
+              <div class="link-hover-container">
+                <a href="display.html?id=${works.id}">
+                  <section class="project-hover">
+                    <span class="material-icons">north_east</span>
+                  </section>
+                </a>
+              </div>
+            </div>
+
           </section>
           <section class="project-name-tag">
             <section>
