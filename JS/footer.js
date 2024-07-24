@@ -75,9 +75,9 @@ socialmedias.forEach((socialmedias) => {
             <div class="contact-add">
                 <p class="footer-headint-txt">Contact</p>
                 <div class="social-medias-links">
-                    <a class="footer-links" href="${socialmedias.emaillink}">${socialmedias.email}</a>
+                    <a class="footer-links" href="${socialmedias.emaillink}" target="_blank">${socialmedias.email}</a>
 
-                    <a class="footer-links" href="${socialmedias.phonelink}">${socialmedias.phone}</a>
+                    <a class="footer-links" href="${socialmedias.phonelink}" target="_blank">${socialmedias.phone}</a>
                     
                 </div>
             
@@ -91,18 +91,18 @@ socialmedias.forEach((socialmedias) => {
         <div class="social-medias">
             <p class="footer-headint-txt">Social Media</p>
             <div class="social-medias-links">
-                <a class="footer-links" href="${socialmedias.socialmedia1link}">${socialmedias.socialmedia1}</a>
-                <a class="footer-links" href="${socialmedias.socialmedia2link}">${socialmedias.socialmedia2}</a>
-                <a class="footer-links" href="${socialmedias.socialmedia3link}">${socialmedias.socialmedia3}</a>
+                <a class="footer-links" href="${socialmedias.socialmedia1link}" target="_blank">${socialmedias.socialmedia1}</a>
+                <a class="footer-links" href="${socialmedias.socialmedia2link}" target="_blank">${socialmedias.socialmedia2}</a>
+                <a class="footer-links" href="${socialmedias.socialmedia3link}" target="_blank">${socialmedias.socialmedia3}</a>
             </div>
         </div>
 
         <div class="social-medias">
             <p class="footer-headint-txt">Portfolio</p>
             <div class="social-medias-links">
-                <a class="footer-links" href="${socialmedias.portfolio1link}">${socialmedias.portfolio1}</a>
-                <a class="footer-links" href="${socialmedias.portfolio2link}">${socialmedias.portfolio2}</a>
-                <a class="footer-links" href="${socialmedias.portfolio3link}">${socialmedias.portfolio3}</a>
+                <a class="footer-links" href="${socialmedias.portfolio1link}" target="_blank">${socialmedias.portfolio1}</a>
+                <a class="footer-links" href="${socialmedias.portfolio2link}" target="_blank">${socialmedias.portfolio2}</a>
+                <a class="footer-links" href="${socialmedias.portfolio3link}" target="_blank">${socialmedias.portfolio3}</a>
             </div>
         </div>
 
