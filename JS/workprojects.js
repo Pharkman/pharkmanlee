@@ -168,7 +168,35 @@
     projectlink: 'https://www.behance.net/gallery/172505111/Furniture-website-landing-page',
      protected: false,
     password: 'password1'
-  }
+  },
+
+  {
+    id: 14,
+    category: 'webdev',
+    image: 'images/dotoday.png',
+    name: 'DoIt',
+    year: '2024',
+    sector: 'Technology',
+    project: 'Web App',
+    projectlink: 'https://www.behance.net/gallery/178082215/FarmWise-UIUX',
+    gitHubLink: 'https://github.com/Pharkman/DoIt',
+    protected: false,
+    password: ''
+  },
+
+  {
+    id: 15,
+    category: 'webdev',
+    image: 'images/communityforum.png',
+    name: 'CommunityWave',
+    year: '2024',
+    sector: 'Technology',
+    project: 'Web App',
+    projectlink: 'https://www.behance.net/gallery/178082215/FarmWise-UIUX',
+    gitHubLink: 'https://github.com/Pharkman/CommunityWave',
+    protected: false,
+    password: ''
+  },
 ];
 
 
