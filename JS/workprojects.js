@@ -170,7 +170,7 @@
     password: 'password1'
   },
 
-  {
+ {
     id: 14,
     category: 'webdev',
     image: 'images/dotoday.png',
@@ -178,7 +178,7 @@
     year: '2024',
     sector: 'Technology',
     project: 'Web App',
-    projectlink: 'https://www.behance.net/gallery/178082215/FarmWise-UIUX',
+    projectlink: 'https://do-it-eight-iota.vercel.app/',
     gitHubLink: 'https://github.com/Pharkman/DoIt',
     protected: false,
     password: ''
@@ -192,11 +192,12 @@
     year: '2024',
     sector: 'Technology',
     project: 'Web App',
-    projectlink: 'https://www.behance.net/gallery/178082215/FarmWise-UIUX',
+    projectlink: 'https://community-wave.vercel.app/',
     gitHubLink: 'https://github.com/Pharkman/CommunityWave',
     protected: false,
     password: ''
   },
+  
 ];
 
 
