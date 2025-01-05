@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-clr:#000000;
+  --text-clr:#DFD9CD;
+  --text-clr-2: rgb(223, 217, 205, 0.6);
+  --blue-clr: #1F51FF;
+  --stroke-line: 0.5px;
+}
+
+/* Body styling */
+body {
+  cursor: none; /* Hides the default system cursor */
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-clr);
+  color: var(--txt-clr-1);
+  font-family: 'Geist', sans-serif;
+}
+
+/* Custom cursor styling */
+.custom-cursor {
+  mix-blend-mode: difference; 
+  background-color: #dfd9cd; 
+  mask: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask: radial-gradient(circle, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
+/* Cursor hover effects */
+.custom-cursor.hover {
+  width: 50px; 
+  height: 50px;
+  background-color: var(--text-clr);
+  transform: scale(1.2); 
+}
+
+@media screen and (max-width: 1120px){
+  
+}
+
+@media screen and (max-width: 810px){
+  .custom-cursor{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .custom-cursor{
+    display: none;
+  }
+}
