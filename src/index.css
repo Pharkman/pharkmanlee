@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-clr:#000000;
+  --text-clr:#DFD9CD;
+  --text-clr-2: rgb(223, 217, 205, 0.6);
+  --blue-clr: #1F51FF;
+  --stroke-line: 0.5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Geist", sans-serif;
+  background-color: var(--bg-clr);
+  cursor: none;
+}
+
+.preloader-number {
+  position: absolute;
+  bottom: 0; 
+  left: 20px;
+  font-size: 6.23rem;
+  font-weight: 400;
+  font-family: "Geist", sans-serif; 
+  overflow: hidden;
+  height: 5.23rem; 
+  line-height: 6.23rem;
+}
+
+.center-content{
+  display: flex;
+}
+
+.center-content h1{
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 3rem;
+}
+
+@media screen and (max-width: 1120px){
+  .preloader-left, .preloader-right {
+    font-size: 2.0rem;
+    font-weight: 900;
+  }
+
+  .preloader-content{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .label{
+    gap: 1.25rem;
+  }
+
+  .preloader-number {
+    position: fixed;
+    bottom: 0; 
+    left: 1rem;
+    font-size: 4.5rem;
+    font-weight: 400;
+    font-family: "Geist", sans-serif; 
+    overflow: hidden;
+    height: 3.23rem; 
+    line-height: 4.5rem;
+  }
+}
