@@ -97,7 +97,7 @@ const Preloader = ({ onComplete }) => {
           style={{
             width: "0%", // Start with no width
             height: "100%", // Adjust thickness
-            backgroundColor: "#fff",
+            backgroundColor: "#DFD9CD",
             transition: "width 0.1s linear",
           }}
         ></div>
