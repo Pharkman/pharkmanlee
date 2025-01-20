@@ -44,7 +44,7 @@ body {
   width: 100%;
   height: 0;  
   padding-top: 90.25%;  
-  background: url("/public/images/picture.png") no-repeat center center, var(--text-clr);  
+  background: url("/public/images/picture.png") no-repeat center center, #111;  
   background-size: cover;  
   position: relative; 
   border-radius: 2rem;
