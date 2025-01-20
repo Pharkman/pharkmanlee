@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-clr:#000000;
+  --text-clr:#DFD9CD;
+  --text-clr-2: rgb(223, 217, 205, 0.6);
+  --blue-clr: #1F51FF;
+  --stroke-line: 0.5px;
+}
+
+body {
+  font-family: "Geist", sans-serif;
+  background-color: var(--bg-clr);
+  cursor: none;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.25rem;
+  padding: 5.5rem 0rem;
+}
+
+.my-name{
+  display: flex;
+  padding: 1.25rem 2.5rem;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.my-name h1{
+  color: var(--text-clr);
+  font-family: Geist;
+  font-size: 8.76rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profilePic-location{
+  display: flex;
+  padding: 0 2.5rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.myName-role{
+  width: 50%;
+}
+
+.myRole{
+  color: var(--text-clr);
+  font-family: Geist;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.25rem; /* 150% */
+  text-transform: uppercase;
+}
+
+.location{
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.time-country{
+  display: flex;
+  flex-direction: column;
+}
+
+.time-date{
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  
+}
+
+.time-date p{
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--text-clr);
+  text-transform: uppercase;
+}
+.country{
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.country p{
+  font-family: Geist;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  line-height: normal;
+  color: var(--text-clr-2);
+  text-transform: uppercase;
+}
+
+.copyright{
+  display: flex;
+  width: fit-content;
+  gap: 0.25rem;
+}
+
+.copyright img{
+  width: 20px;
+  height: auto;
+}
+
+#home {
+  display: flex;
+  justify-content: center; 
+  align-items: center;                 
+  width: 100%;              
+}
+
+@media screen and (max-width: 1120px){
+  .my-name{
+    display: flex;
+    width: 95%;
+    align-items: start;
+    justify-content: center;
+    padding: 1.25rem 0rem;
+  }
+
+  .home{
+    padding-top: 6.5rem;
+    gap: 3rem;
+  }
+
+  .my-name h1{
+    font-size: 6.52rem;
+    font-weight: 600;
+    text-align: start;
+    line-height: 100%;
+    width: 100%;
+  }
+
+  .profilePic-location{
+    padding: 0 0rem;
+    width: 95%;
+    flex-direction: column-reverse;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .time-image{
+    width: 45px;
+    height: auto;
+  }
+
+  .myName-role{
+    width: 100%;
+  }
+
+  .myRole{
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .my-name{
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .my-name{
+    display: flex;
+    padding: 1.25rem 1rem;
+    width: 100%;
+  }
+
+  .home{
+    padding-top: 6.5rem;
+  }
+
+  .my-name h1{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: start;
+    width: 100%;
+    line-height: 75px;
+  }
+
+  .profilePic-location{
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  .time-image{
+    width: 45px;
+    height: auto;
+  }
+
+  .myName-role{
+    width: 100%;
+  }
+
+  .myRole{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+
+
+
