@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

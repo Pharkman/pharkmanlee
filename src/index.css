@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+
+@font-face {
+  font-family: "MyFont"; /* this is the name you'll use */
+  src: url("../public/fonts/MyFont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* makes text show immediately */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  position: relative;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.preloader-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.loading-number {
+  font-size: 2rem;
+  font-family: "Geist";
+  font-weight: 400;
+  height: 5.23rem; 
+  line-height: 1.83rem;
+  color: var(--text-clr);
+}
+
+#preloader{
+  background-color: var(--surface-primary);
+}
+
+.center-slider{
+  width: 25%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.center-slider img{
+  width: 100%;
+  height: auto;
+}
+
+
+.inner-slider {
+  width: 0%;
+  height: 100%;
+  background-color: var(--text-clr);
+}
+
+.corner-arc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--cursor-color);
+  will-change: transform;
+}
+
+.t-l {
+  transform: translate(-150%, -150%);
+  border-right: none;
+  border-bottom: none;
+}
+
+.t-r {
+  transform: translate(50%, -150%);
+  border-left: none;
+  border-bottom: none;
+}
+
+.b-r {
+  transform: translate(50%, 50%);
+  border-left: none;
+  border-top: none;
+}
+
+.b-l {
+  transform: translate(-150%, 50%);
+  border-right: none;
+  border-top: none;
+}
+
+
+.number-loading{
+  font-family: "Geist";
+  font-size: 1rem;
+  font-weight: 400;
+  color: #0A0A0A;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.number-loading-cont{
+  display: flex;
+  position: relative;
+}
+
+.preloader-number {
+  font-variant-numeric: tabular-nums;
+}
+
+@media screen and (max-width: 1120px){
+  .preloader-left, .preloader-right {
+    font-size: 2.0rem;
+    font-weight: 900;
+  }
+
+  .preloader-content{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .label{
+    gap: 1.25rem;
+  }
+
+  .preloader-number {
+    position: fixed;
+    bottom: 0; 
+    left: 1rem;
+    font-size: 4.5rem;
+    font-weight: 400;
+    font-family: "Geist", sans-serif; 
+    overflow: hidden;
+    height: 3.23rem; 
+    line-height: 4.5rem;
+  }
+
+  .center-slider{
+    width: 40%;
+    height: 40px;
+    background-color: var(--text-clr-2);
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  .inner-slider {
+    width: 0%;
+    height: 100%;
+    background-color: var(--text-clr);
+  }
+
+}
+
+.center-content{
+  padding: 0 1rem;
+}

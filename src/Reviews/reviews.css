@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+.reviews-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 3.5rem 2.5rem;
+}
+
+.headin-txt{
+  display: flex;
+
+}
+
+.headin-txt svg{
+  color: var(--text-clr);
+}
+
+.reviews{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 1.5rem;
+}
+
+.quoter-company{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.review-list{
+  display: flex;
+  gap: 1.5rem;
+  align-items: start;
+  width: 32%;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--surface-modal);
+  height: 24.6875rem;
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+}
+
+.reviews-qoute{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.825rem;
+}
+
+.qoute-icon{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  height: 2rem;
+}
+
+.reviews-qoute p{
+  color: var(--text-secondary);
+  font-family: "Geist";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.name-picture{
+  display: flex;
+  width: fit-content;
+  border-radius: 1rem;
+  gap: 1rem;
+  align-items: start;
+}
+
+.review-pic{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 34rem;
+  overflow: hidden;
+}
+
+.review-pic img{
+  width: 100%;
+  height: 100%;
+}
+
+.review-name-role{
+  display: flex;
+  flex-direction: column;
+}
+
+.review-name-role h3{
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.review-name-role p{
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.company-logo{
+  display: flex;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.company-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1120px){
+  
+
+}
+
+@media screen and (max-width: 480px){
+  .reviews-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3.5rem 1rem;
+  }
+
+  .reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 1.5rem;
+  }
+
+  .review-list{
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+    width: 100%;
+    height: 20.6875rem;
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,131 @@
+/* src/components/falling-text.css */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your existing Tailwind vars stay untouched */
+:root {
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+  --text-primary: #0A0A0A;
+}
+.dark-mode {
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+  --text-primary: #FFFFFF;
+}
+
+/* -------------------------------------------------
+   Container
+   ------------------------------------------------- */
+.falling-text-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* padding: 4rem 2rem 2rem; */
+}
+
+.falling-text-target{
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------------------------------------
+   Each word – CSS-only physics
+   ------------------------------------------------- */
+.falling-word {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  white-space: nowrap;
+  pointer-events: auto;               /* allow dragging */
+  cursor: grab;
+
+  /* Drop animation */
+  animation:
+    drop var(--gravity, 0.6s) ease-out forwards,
+    wiggle 1.2s ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Drop + bounce */
+@keyframes drop {
+  0%   { transform: translateX(-50%) translateY(-120%) rotate(0deg); opacity: 0; }
+  60%  { opacity: 1; }
+  100% { transform: translateX(var(--final-x, -50%)) translateY(var(--final-y, 80vh)) rotate(var(--final-rot, 0deg)); }
+}
+
+/* Tiny wiggle for "push" feel */
+@keyframes wiggle {
+  from { transform: translateX(var(--final-x, -50%)) translateY(var(--final-y)) rotate(var(--final-rot)) scale(1); }
+  to   { transform: translateX(var(--final-x, -50%)) translateY(var(--final-y)) rotate(var(--final-rot)) scale(1.05); }
+}
+
+/* -------------------------------------------------
+   Highlighted pill
+   ------------------------------------------------- */
+.highlighted {
+  display: inline-block;
+  color: var(--text-primary);
+  background: var(--surface-modal);
+  font-weight: 700;
+  font-family: "Geist", sans-serif;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50rem;
+  cursor: grab;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 700;
+  cursor: grab;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: all;
+  font-family: "Geist";
+  color: #000; 
+  cursor: grab;
+}
+
+/* normal words – white background, no colour */
+.pill.plain {
+  background: #fff;
+  color: #333;
+  display: none;
+}
+
+@media screen and (max-width: 480px){
+  .pill {
+    display: inline-block;
+    padding: 0.55rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 600;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: all;
+    font-family: "Geist";
+    color: #000; 
+    cursor: grab;
+  }
+}

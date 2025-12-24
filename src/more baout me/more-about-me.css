@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+
+.headin-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.section-heading-more{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-heading-more h1{
+  color: var(--text-primary);
+  font-size: 9.94106rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headin-txt h1 {
+  color: var(--text-primary);
+  font-size: 10.54106rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headin-txt p {
+  font-size: 2rem;
+  color: var(--text-clr);
+  font-weight: 500;
+}
+
+.changing-word {
+  font-style: italic;
+  transition: opacity 0.5s ease;
+  color: var(--text-clr-2);
+}
+
+.highlight-works {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  height: 400px;
+  width: fit-content;
+  white-space: nowrap;
+  gap: 1.5rem;
+}
+
+.slider-track img {
+  width: auto; 
+  height: 100%; 
+  object-fit: cover;
+  flex-shrink: 0; 
+  border-radius: 2rem; 
+}
+
+.short-about-me-more{
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 3.5rem;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+
+.about-me-more{
+  display: flex;
+  align-items: start;
+  width: 100%;
+  flex-direction: column;
+  min-height: auto; 
+  height: auto;
+  padding: 6.5rem 2.5rem;
+  gap: 3rem;
+}
+
+
+.my-images {
+  display: flex;
+  width: 100%;
+  height: auto; 
+  justify-content: space-between;
+}
+
+.other-picture {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.other-image-1 {
+  width: 32%; 
+  height: 500px;
+  overflow: hidden;
+  width: 10.25rem;
+  height: 11.75rem;
+  /* transform: rotate(-20.825deg); */
+}
+
+.about-image-converse{
+  width: 49%; 
+  height: auto;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 2.5rem;
+  display: flex;
+}
+
+.other-image-2-more {
+  width: 100%; 
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 332/381;
+}
+
+
+.other-image-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.other-image-2-more img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-me-text-more{
+  display: flex;
+  width: 100%;
+  padding: 0rem 0rem 0rem 0rem;
+  align-items: end;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.about-me-para{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 49%;
+  padding: 2.5rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid var(--strk-clr);
+}
+
+.about-me-para p{
+  color: var(--text-clr);
+  font-family: Switzer;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.about-me-para svg{
+  color: var(--text-clr);
+}
+
+.expertise-list-cont-more {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.experience-list-more {
+  display: flex;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--btn-border-default);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-number {
+  color: var(--text-primary);
+  font-family: "MyFont";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.number-desc {
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 13.6875rem;
+}
+
+
+.section-sub-heading-more {
+  display: flex;
+  width: 22.5625rem;
+}
+
+.section-sub-heading-more p{
+  text-align: right;
+  font-family: Geist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.04rem;
+  text-transform: uppercase;
+  color: var(--sub-text);
+}
+
+/* .short-about-me{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 3.5rem;
+  justify-content: end;
+  padding: 7.5rem 0;
+} */
+
+.about-read-btn-more{
+  display: flex;
+  width: 49%;
+  height: auto;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.about-me-p-more{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-me-p-more p{
+  color: var(--text-secondary);
+  text-align: start;
+  font-family: "Geist";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 133.333% */
+}
+
+.read-more-btn{
+  width: fit-content;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--strk-clr);
+  color: var(--text-clr);
+  border-radius: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all ease-out 0.9s;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.read-more-btn svg{
+  color: var(--text-clr);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+}
+
+.read-more-btn:hover svg {
+  display: flex; /* Shows the SVG on hover */
+  opacity: 1; 
+  transform: rotate(-15deg);
+}
+
+#about-more {
+  display: flex;
+  justify-content: space-between; 
+  align-items: start;      
+  height: fit-content;            
+  width: 100%;              
+}
+
+.tools-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 3.5rem 0;
+  width: 100%;
+  height: fit-content;
+}
+
+.tools-use{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  /* padding: 0 2rem; */
+  overflow: visible;
+}
+
+.tools{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 1.5rem;
+}
+
+.label{
+  display: flex;
+  width: 100%;
+  align-items: end;
+  justify-content: space-between;
+} 
+
+.interest-list{
+  display: flex;
+  gap: 1.5rem;
+  align-items: start;
+  width: 32%;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--surface-modal);
+  height: 24.6875rem;
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+}
+
+.tool-qoute{
+  display: flex;
+  width: 100%;
+}
+
+.interest-head{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: end;
+}
+
+.interest-label{
+  display: flex;
+  width: 100%;
+  align-items: start;
+}
+
+.interest-label p{
+  font-family: "Geist";
+  font-size: 1.5rem;
+  color: var(--sub-text);
+}
+
+.interest-quote{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: end;
+}
+
+.interest-fav{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.fav-qoute{
+  font-family: "Geist";
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.fav-interest{
+  font-family: "Geist";
+  font-size: 2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.interest-texts{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+  gap: 0.85rem;
+}
+
+.interest-text-1{
+  font-family: "Geist";
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 500;  
+  letter-spacing: -4%;
+}
+
+.sub-interest{
+  font-family: "Geist";
+  font-size: 1.5rem;
+  color: var(--sub-text);
+  font-weight: 500;  
+  letter-spacing: -4%;
+}
+
+.interest-fav-cont{
+  display: flex;
+  width: 100%;
+  /* padding: 6rem 0; */
+  border-radius: 0.85rem;
+  background-color: var(--surface-primary);
+  overflow: hidden;
+  justify-content: center;    
+  align-items: center;
+}
+
+.interest-fav-cont img{
+  height: 152px;
+  width: 100%;
+  background-size: cover;  
+  background-size: center; 
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  transition: transform .2s; 
+}
+
+.interest-fav-cont img:hover {
+  transform: scale(1.09);      /* gentle zoom on hover */
+}
+
+@media screen and (max-width: 1120px){
+  .about-me{
+    padding: 5.5rem 2rem 3.5rem 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .about-me-text{
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 0.625rem 0rem;
+    align-items: start;
+  }
+
+   .my-images{
+    width: 100%
+  }
+
+  .image-1{
+    padding-top: 100%;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .about-me{
+    padding: 2.5rem 1rem 3.5rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .about-me-heading{
+    width: 100%;
+  }
+
+  .about-me-heading h1{
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .about-me-para p{
+    font-size: 1rem;
+  }
+
+  .my-name{
+    display: flex;
+    padding: 1.25rem 1rem
+  }
+
+   .my-images{
+    width: 100%;
+    gap: 2.5rem;
+  }
+
+  .image-1{
+    padding-top: 100%;
+  }
+
+  .about-me-text{
+    padding: 0rem 0rem;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .book-call{
+    color: var(--bg-clr);
+    font-size: 0.75rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .resume{
+    color: var(--text-clr);
+    font-size: 0.75rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .resume svg{
+    width: 18px;
+    height: 18px;
+  }
+
+  .book-call svg{
+    width: 18px;
+    height: 18px;
+  }
+
+  .section-heading-more h1{
+    color: var(--text-primary);
+    font-size: 5.54106rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.54106rem;
+  }
+
+  .about-me-more{
+    display: flex;
+    align-items: start;
+    width: 100%;
+    flex-direction: column;
+    min-height: auto; 
+    height: auto;
+    padding: 6.5rem 1rem;
+    gap: 3rem;
+  }
+
+  .short-about-me-more{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image-converse{
+    width: 100%;
+  }
+
+  .about-read-btn-more{
+    width: 100%;
+  }
+
+  .section-sub-heading-more {
+    display: flex;
+    width: 100%;
+  }
+
+  .section-sub-heading-more p{
+    text-align: left;
+  }
+
+  .tools{
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; */
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .interest-list{
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  padding: 9rem 2.5rem 2.5rem  2.5rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 7.5rem;
+  width: 100%;
+}
+
+.let-work-accounts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.let-work{
+  display: flex;
+  width: fit-content;
+  height: auto;
+}
+
+.let-work svg{
+  color: var(--text-clr);
+}
+
+.social-accounts{
+  display: flex;
+  align-items: center;
+  gap: 3.5625rem;
+  flex-wrap: wrap;
+}
+
+.social-accounts-link{
+  color: var(--text-clr);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+}
+
+.social-accounts-link::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--text-clr);
+  bottom: 0;
+  transition: width 0.5s ease;
+}
+
+
+.social-accounts-link:hover::before{
+  width: 100%;
+}
+
+.who-design-develop{
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.who-design-develop p{
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--text-clr-2);
+}
+
+.my-name-footer{
+  color: var(--text-clr-2);
+  font-family: Geist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.my-name-footer::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--text-clr-2);
+  color: var(--text-clr);
+  bottom: 0;
+  transition: width 0.5s ease;
+}
+
+.my-name-footer:hover::before{
+  width: 100%;
+}
+
+.footer-cont{
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-inverse);
+  display: flex;
+  padding: 4.375rem 2.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  align-self: stretch;
+  border-radius: 1rem;
+
+}
+
+.footer-heading-txt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.footer-heading-txt h1{
+  color: var(--text-inverse);
+  text-align: center;
+  font-size: 15.34925rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12.791rem; /* 83.333% */
+  letter-spacing: -0.614rem;
+  text-transform: uppercase;
+  width: 57.6875rem;
+}
+
+.footer-btn{
+  display: flex;
+  padding: 0.875rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--btn-primary-text);
+  color: var(--btn-primary);
+  font-family: "Geist";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+  text-transform: uppercase;
+}
+
+.footer-btn svg {
+  display: flex; 
+  color: var(--btn-primary);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-btn:hover svg {
+  display: flex; /* Shows the SVG on hover */
+  opacity: 1; 
+  transform: rotate(-20deg);
+}
+
+.footer-social-links{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.social-portfolio-hire{
+  display: flex;
+  width: 39.375rem;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.portfoli-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1 0 0;
+}
+
+.portfoli-links h1{
+  color: var(--text-inverse);
+  font-family: "Geist";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.footer-links-list{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fo-links{
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  border: 1px solid var(--btn-primary-text);
+  color: var(--btn-primary-text);
+}
+
+/* .fo-links svg{
+  color: var(--btn-primary-text);
+} */
+
+.fo-links:hover{
+  background-color: var(--btn-primary-text);
+  color: var(--btn-primary);
+
+}
+
+.copyright-email{
+  display: flex;
+  width: 21rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.copyright-email a{
+  color: var(--text-inverse);
+  font-family: "Geist";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.copyright-email p{
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 1120px){
+  .footer {
+    padding: 9rem 1rem 4rem 1rem;
+    width: 100%;
+  }
+
+  .let-work-accounts{
+    width: 100%;
+  }
+
+  .let-work{
+    display: flex;
+    width: fit-content;
+    height: auto;
+    width: 100%;
+  }
+
+  .let-work h1{
+    text-align: center;
+    font-size: 3.5rem;
+    width: 100%;
+  }
+
+  .social-accounts{
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .who-design-develop{
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .who-design-develop p{
+    font-size: 0.85rem;
+  }
+
+}
+
+@media screen and (max-width: 810px){
+  .footer {
+    padding: 9rem 2rem 4rem 2rem;
+    width: 100%;
+  }
+
+  .let-work-accounts{
+    width: 100%;
+  }
+
+  .let-work{
+    display: flex;
+    width: fit-content;
+    height: auto;
+    width: 100%;
+  }
+
+  .let-work h1{
+    text-align: center;
+    font-size: 3.5rem;
+    width: 100%;
+  }
+
+  .social-accounts{
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .who-design-develop{
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .who-design-develop p{
+    font-size: 0.85rem;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .footer {
+    padding: 9rem 1rem 4rem 1rem;
+    width: 100%;
+  }
+
+  .let-work-accounts{
+    width: 100%;
+  }
+
+  .let-work{
+    display: flex;
+    width: fit-content;
+    height: auto;
+    width: 100%;
+  }
+
+  .let-work h1{
+    text-align: center;
+    font-size: 3.5rem;
+    width: 100%;
+  }
+
+  .social-accounts{
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .who-design-develop{
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .who-design-develop p{
+    font-size: 0.85rem;
+  }
+
+  .footer-cont{
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-inverse);
+    display: flex;
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-heading-txt h1{
+    color: var(--text-inverse);
+    text-align: center;
+    font-size:  5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5rem; 
+    letter-spacing: -0.125rem;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .footer-social-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .social-portfolio-hire{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-shrink: 0;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+}

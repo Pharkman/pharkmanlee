@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root{
+  --bg-clr:#000000;
+  --text-clr:#DFD9CD;
+  --text-clr-2: rgb(223, 217, 205, 0.6);
+  --blue-clr: #1F51FF;
+  --stroke-line: 0.5px;
+} */
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+/* Body styling */
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+/* Custom cursor styling */
+.custom-cursor {
+  mix-blend-mode: difference; 
+  background-color: #dfd9cd; 
+  mask: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask: radial-gradient(circle, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 9999;
+  display: none;
+}
+
+
+/* Cursor hover effects */
+.custom-cursor.hover {
+  width: 50px; 
+  height: 50px;
+  background-color: var(--text-clr);
+  transform: scale(1.2); 
+}
+
+@media screen and (max-width: 1120px){
+  .custom-cursor{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 810px){
+  .custom-cursor{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .custom-cursor{
+    display: none;
+  }
+}

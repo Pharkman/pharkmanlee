@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+.display-project-cont{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.display-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 2.5rem 0rem 2.5rem;
+  width: 100%;
+  margin-top: 6rem;
+}
+
+.display-project.open {
+  transform: translateY(0);
+}
+
+.go-back-btn{
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #5C9AE2;
+  background: linear-gradient(0deg, #6DA6E8 0%, #003C82 50%, #4DA0FF 100%);
+  box-shadow: 2px -2px 50px 0px rgba(18, 104, 204, 0.18), -2px 2px 50px 0px rgba(76, 147, 230, 0.18);
+  color: #fff;
+  border-radius: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all ease-out 0.9s;
+  position: relative;
+}
+
+.go-back-btn svg {
+  display: flex; 
+  color: #fff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.go-back-btn:hover svg {
+  display: flex; /* Shows the SVG on hover */
+  opacity: 1; 
+  transform: rotate(45deg);
+}
+
+.back-button p{
+  font-size: 0.85rem;
+}
+
+.next-prev-button{
+  display: flex;
+  width: 100%;
+  padding-bottom: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6rem;
+}
+
+.next-prev-button p{
+  z-index: 10;
+}
+
+.next-prev-button a{
+  /* border-bottom: 0px solid var(--text-clr);
+  background-color: #111;
+  color: var(--text-clr);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 3rem;
+  overflow: hidden; */
+
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #5C9AE2;
+  background: linear-gradient(0deg, #6DA6E8 0%, #003C82 50%, #4DA0FF 100%);
+  box-shadow: 2px -2px 50px 0px rgba(18, 104, 204, 0.18), -2px 2px 50px 0px rgba(76, 147, 230, 0.18);
+  color: #fff;
+  border-radius: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all ease-out 0.9s;
+  position: relative;
+}
+
+.next-prev-button a img{
+  width: 6px;
+  z-index: 10;
+}
+
+
+.back-button h1{
+  color: var(--text-clr-2);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.next-prev-button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; 
+  height: 100%;
+  background-color: var(--blue-clr);
+  transition: width 0.5s ease; 
+}
+
+
+.project-content{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-note{
+  display: flex;
+  padding: 0.65rem;
+  width: 100%;
+  background-color: #111;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.project-note p{
+  font-size: 0.85rem;
+  color: var(--text-clr);
+  text-transform: uppercase;
+}
+
+.project-note p a{
+  text-decoration: underline;
+}
+
+.project-desc{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.project-name{
+  font-size: 11.75544rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 9.50575rem; /* 80.863% */
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: -0.16rem;
+}
+
+.designer-name{
+  font-size: 11.75544rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 9.50575rem; /* 80.863% */
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.project-short-desc{
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-top: 1rem;
+}
+
+.published-date{
+  font-size: 1rem;
+  color: var(--text-clr-2);
+  text-transform: uppercase;
+}
+
+.designer-year{
+  display: flex;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  background-color: var(--light-clr);
+  border-radius: 4rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-cover-name{
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.project-cover{
+  display: flex;
+  width: 100%;
+  height: 46.625rem;
+  overflow: hidden;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--surface-modal);
+}
+
+.project-cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+.role-date-cont{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.project-year, .project-type, .project-industry, .project-role{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0rem;
+  border-bottom: 1px solid var(--btn-border-default)
+}
+
+.project-year, .project-type, .project-industry, .project-role p{
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-family: "Geist";
+}
+
+.project-role span{
+  color: var(--sub-text);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Geist";
+}
+
+.project-industry span{
+  color: var(--sub-text);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Geist";
+}
+
+.project-year span{
+  color: var(--sub-text);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Geist";
+}
+
+.project-type span{
+  color: var(--sub-text);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Geist";
+}
+
+.roles{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.85rem;
+}
+
+.picture-cont{
+  width: 32px;
+  background-color: #1F51FF;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+
+.picture-cont img{
+  width: 100%;
+}
+
+.introduction{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.introduction h1{
+  font-size: 2rem;
+  color: var(--text-clr);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.introduction p{
+  font-size: 1rem;
+  color: var(--text-clr-2);
+}
+
+.problem{
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+}
+
+.problem-statement{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  width: 100%;
+  gap: 3rem;
+}
+
+.problem-txts{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.problem-img, .solution-img, .challeng-img, .design-process-img{
+  display: flex;
+  width: 100%;
+  height: 46.625rem;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--surface-modal);
+}
+
+.problem-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  object-position: center; /* Centers the image */
+}
+
+.problem-txts h1{
+  color: var(--text-primary);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.5rem; /* 100% */
+  letter-spacing: -0.16rem;
+  text-transform: uppercase;
+  width: 20rem;
+}
+
+.problem-txts p{
+  width: 39.1875rem;
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.problem-statement-img{
+  display: flex;
+  width: 100%;
+  height: 46.625rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.solution h1{
+  font-size: 2rem;
+  color: var(--text-clr);
+  text-transform: uppercase;
+}
+
+.problem ul{
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.problem li{
+  font-size: 1rem;
+  color: var(--text-clr-2);
+  list-style-position: outside;
+  padding-left: 0.5rem;
+  margin-left: 15px;
+}
+
+.problem img{
+  display: flex;
+  border-radius: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.design-process h1{
+  font-size: 2rem;
+  color: var(--text-clr);
+  text-transform: uppercase;
+}
+
+.design-process p{
+  font-size: 1rem;
+  color: var(--text-clr-2);
+}
+
+.design-process-img{
+  display: flex;
+  width: 50%;
+  border-radius: 1.5rem;
+}
+
+.UI-design-display {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.UI-1, .UI-3, .UI-5{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  box-sizing: border-box;
+  background-color: var(--surface-modal);
+}
+
+.UI-2, .UI-4{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+
+.UI-1 img, .UI-3 img, .UI-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+}
+
+
+.UI-2-1, .UI-4-1{
+  width: 49%;
+  height: 27.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: var(--surface-modal);
+}
+
+.UI-2-1 img, .UI-4-1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+}
+
+/* .problem-statement:empty {
+  display: none;
+}
+.UI-design-display:empty {
+  display: none;
+} */
+
+.more-projects{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 7.5rem 0rem 0rem 0rem;
+}
+
+.more-projects-heading{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-projects-heading h1{
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 14.44613rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12.03844rem; 
+  letter-spacing: -0.57788rem;
+  text-transform: uppercase;
+}
+
+.more-project-slide{
+  display: flex;
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+}
+
+.project-slide{
+  display: flex;
+  width: 49%;
+  height: 22.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectName-category-viewPro{
+  display: flex;
+  gap: 0.25rem;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projectName-category{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: start;
+  width: 100%;
+}
+
+.project-category{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.category-industry{
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+
+
+
+@media screen and (max-width: 1120px){
+
+  .back-button{
+    display: flex;
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+
+  .display-project{
+    width: 100%;
+    padding: 2rem 2rem;
+    margin-top: 4rem;
+  }
+
+  .project-content{
+    width: 100%;
+  }
+
+  .project-note p{
+    font-size: 1rem;
+  }
+
+  .designer-name{
+  color: var(--text-clr);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.published-date{
+  font-size: 1rem;
+}
+
+  .next-prev-button{
+    display: flex;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6rem;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+
+  .back-button{
+    display: flex;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .display-project{
+    width: 100%;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+  }
+
+  .project-content{
+    width: 100%;
+  }
+
+  .project-note p{
+    font-size: 0.55rem;
+  }
+
+  .designer-name{
+  color: var(--text-clr);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.published-date{
+  font-size: 0.75rem;
+}
+
+  .next-prev-button{
+    display: flex;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6rem;
+  }
+
+  .project-cover-name{
+    width: 100%;
+  }
+
+  .project-cover{
+    display: flex;
+    width: 100%;
+    height: 350px;
+  }
+
+  .project-name{
+    font-size: 5.75544rem;
+    line-height: 5.70575rem; /* 80.863% */
+    letter-spacing: -0.16rem;
+  }
+
+  .problem-txts{
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .problem-txts p{
+    width: 100%;
+    font-size: 1.15rem;
+  }
+ 
+  .problem-img, .solution-img, .challeng-img, .design-process-img{
+    height: 300px;
+  }
+
+  .UI-2, .UI-4{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+  .UI-2-1{
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .UI-4-1{
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .more-projects-heading h1{
+    font-size: 7.44613rem;
+    line-height: 6rem; 
+    letter-spacing: -0.125rem;
+  }
+
+  .more-project-slide{
+    width: 100%;
+  }
+
+  .project-year, .project-type, .project-industry, .project-role p{
+    font-size: 0.85rem;
+  }
+
+  .project-role{
+    justify-content: space-between;
+    
+  }
+
+  .roles{
+    width: 65%;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: end;
+  }
+  
+  .project-short-desc{
+    font-size: 1.15rem;
+  }
+
+  .problem-txts p{
+
+  }
+}

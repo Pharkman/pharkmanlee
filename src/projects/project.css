@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+.my-projects{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  align-self: stretch;
+  padding: 4.5rem 2.5rem 4.5rem  2.5rem;
+  overflow: hidden;
+}
+
+
+.label{
+  display: flex;
+  width: 100%;
+  align-items: end;
+  justify-content: space-between;
+} 
+
+.ui-shot{
+  padding-top: 5rem;
+}
+
+.label p{
+  color: var(--text-primary);
+  font-family: "Geist";
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 75px;
+  text-transform: uppercase;
+}
+
+.label svg{
+  color: var(--text-primary);
+}
+
+.label span{
+  color: var(--text-primary);
+  width: 350px;
+  font-family: "Geist";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3125rem; /* 150% */
+  
+}
+
+/* .section-heading{
+  display: flex;
+  width: 27.0625rem;
+}
+
+.section-heading h1{
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6.25rem;
+  letter-spacing: -0.225rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.section-sub-heading {
+  display: flex;
+  width: 22.5625rem;
+}
+
+.section-sub-heading p{
+  text-align: right;
+  font-family: Geist;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.04rem;
+  text-transform: uppercase;
+  color: var(--sub-text);
+} */
+
+.case-study{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-list{
+  display: flex;
+  flex-direction: column;
+  width: 48.9%;                
+  height: auto;                
+  align-items: flex-start;    
+  gap: 1rem;                   
+  cursor: pointer;
+  transition: transform 0.7s ease-out;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.tilted-card-inner {
+  background-color: var(--surface-modal); /* Fallback if image fails */
+}
+
+.project-thumbnail {
+  display: block;       
+  width: 100%;               
+  height: 0;                 
+  padding-top: 63%;        
+  background-color: var(--surface-modal);
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  overflow: hidden;
+  align-items: center;
+}
+
+.project-thumbnail:hover {
+  transform: scale(1.05); 
+  border-radius: 0rem; /* Remove rounding completely on hover */
+  overflow: hidden; 
+}
+
+.projectName-category-viewPro{
+  display: flex;
+  gap: 0.25rem;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.projectName-category{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: start;
+  width: 100%;
+}
+
+.project-category{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.category-industry{
+  color: var(--sub-text);
+  font-family: "Geist";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.category-type{
+  border: 0.5px solid rgba(221, 100, 2, 0.10);
+  background: rgba(221, 100, 2, 0.10);
+  color: #DD6402;
+}
+
+.category-year{
+  border: 0.5px solid rgba(208, 146, 241, 0.10);
+  background: rgba(208, 146, 241, 0.10);
+  color: #D092F1;
+}
+
+.projectName{
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform all 6.7s ease-out;
+  transition: all ease-out 0.9s;
+  position: relative;
+}
+
+.projectName svg{
+  color: var(--text-primary);
+  display: flex;
+  opacity: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.projectName h1{
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem; /* 100% */
+  letter-spacing: -0.03rem;
+  text-transform: uppercase;
+}
+
+.viewPro{
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+
+.project-links{
+  opacity: 0; 
+  visibility: hidden; 
+  transform: translateY(-10px); 
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.project-link{
+  display: flex;
+  width: 100%;
+  height: 300px;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.9s ease-out;
+  overflow: hidden;
+}
+
+.project-list:hover .projectName svg{
+  display: flex;
+  opacity: 1;
+  transform: rotate(-45deg);
+  animation: svgAppear 0.9s ease forwards;
+}
+
+/* @keyframes svgAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-12px) scale(0.7) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-6px) scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0);
+  }
+} */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;                 
+  width: 100%;              
+}
+
+@media screen and (max-width: 1120px){
+  .my-projects{
+    padding: 4.5rem 0rem 3.5rem  0rem;
+    gap: 2.5rem;
+  }
+
+  .label{
+    gap: 2.5rem;
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .label p{
+    font-size: 5.5rem;
+    width: 100%;
+    line-height: 65px;
+    word-wrap: break-word;
+  }
+
+  .label span{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .case-study{
+    width: 95%;
+  }
+
+  .project-list{
+    width: 49%;
+  }
+
+  .project-thumbnail {
+    padding-top: 75%;          /* Adjust aspect ratio for mobile (4:3) */
+  }
+
+  .projectName h1{
+    font-size: 1.6rem;
+  }
+
+  .projectName img{
+    width: 2.0rem;
+    height: 2.0rem;
+    display: flex;
+  }
+
+  .project-category p{
+    font-size: 0.75rem;
+  }
+
+  .projectName-category{
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 880px){
+  .my-projects{
+    padding: 3.5rem 0rem 3.5rem  0rem;
+    gap: 2.5rem;
+  }
+
+  .label{
+    gap: 2.5rem;
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .label p{
+    font-size: 5.5rem;
+    width: 100%;
+    line-height: 6.25rem;
+    word-wrap: break-word;
+  }
+
+  .label span{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .case-study{
+    width: 95%;
+  }
+
+  .project-list{
+    width: 49%;
+  }
+
+  .project-thumbnail {
+    padding-top: 75%;          /* Adjust aspect ratio for mobile (4:3) */
+  }
+
+  .projectName h1{
+    font-size: 1.6rem;
+  }
+
+  .projectName img{
+    width: 2.0rem;
+    height: 2.0rem;
+    display: flex;
+  }
+
+  .projectName-category{
+    gap: 0.5rem;
+  }
+
+  .project-category p{
+    font-size: 0.75rem;
+  }
+}
+
+
+@media screen and (max-width: 480px){
+  .my-projects{
+    padding: 6.5rem 1rem 3.5rem  1rem;
+    gap: 2.5rem;
+  }
+
+  .label{
+    gap: 2.5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .label p{
+    font-size: 3.2rem;
+    width: 100%;
+    line-height: 65px;
+    word-wrap: break-word;
+  }
+
+  .case-study{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-list {
+    width: 100%; 
+  }
+
+  .project-link{
+    display: flex;
+    padding: 0.65rem 0.65rem 1rem 0.65rem;
+    /* border-radius: 1.65rem;  */
+  }
+
+  .project-thumbnail {
+    padding-top: 70%; 
+    border-radius: 1rem;         
+  }
+
+  .projectName h1{
+    font-size: 1.6rem;
+  }
+
+  .projectName img{
+    width: 2.0rem;
+    height: 2.0rem;
+    display: flex;
+  }
+
+  .project-category p{
+    font-size: 0.75rem;
+  }
+
+  .projectName-category{
+    gap: 0.5rem;
+  }
+}
+
+

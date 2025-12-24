@@ -1,0 +1,163 @@
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./reviews.css";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Testmonials = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context((self) => {
+      // Heading + subheading fade in together
+      gsap.fromTo(
+        [".reviews-cont .section-heading", ".reviews-cont .section-sub-heading"],
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: ".reviews-cont .label",
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
+
+      // All review cards - nice staggered reveal
+      gsap.fromTo(
+        ".reviews-cont .review-list",
+        { opacity: 0, y: 60, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.2,           // Each card comes in after the previous → feels premium
+          scrollTrigger: {
+            trigger: ".reviews",
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert(); // Clean up
+  }, []);
+
+  return (
+    <div className="reviews-cont" ref={sectionRef}>
+      <div className="label">
+        <div className="section-heading">
+          <h1>Testimonials</h1>
+        </div>
+        <div className="section-sub-heading">
+          <p>Genuine words from people I’ve worked with and designed alongside.</p>
+        </div>
+      </div>
+
+      <div className="reviews">
+        <div className="review-list">
+          <div className="reviews-qoute">
+            <div className="qoute-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="27" viewBox="0 0 26 19" fill="none">
+                <path
+                  d="M11.5 2V13C11.4983 14.5908 10.8657 16.116 9.74081 17.2408C8.61595 18.3657 7.09079 18.9983 5.5 19C5.23478 19 4.98043 18.8946 4.79289 18.7071C4.60536 18.5196 4.5 18.2652 4.5 18C4.5 17.7348 4.60536 17.4804 4.79289 17.2929C4.98043 17.1054 5.23478 17 5.5 17C6.56087 17 7.57828 16.5786 8.32843 15.8284C9.07857 15.0783 9.5 14.0609 9.5 13V12H2C1.46957 12 0.960859 11.7893 0.585786 11.4142C0.210714 11.0391 0 10.5304 0 10V2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H9.5C10.0304 0 10.5391 0.210714 10.9142 0.585786C11.2893 0.960859 11.5 1.46957 11.5 2ZM24 0H16.5C15.9696 0 15.4609 0.210714 15.0858 0.585786C14.7107 0.960859 14.5 1.46957 14.5 2V10C14.5 10.5304 14.7107 11.0391 15.0858 11.4142C15.4609 11.7893 15.9696 12 16.5 12H24V13C24 14.0609 23.5786 15.0783 22.8284 15.8284C22.0783 16.5786 21.0609 17 20 17C19.7348 17 19.4804 17.1054 19.2929 17.2929C19.1054 17.4804 19 17.7348 19 18C19 18.2652 19.1054 18.5196 19.2929 18.7071C19.4804 18.8946 19.7348 19 20 19C21.5908 18.9983 23.116 18.3657 24.2408 17.2408C25.3657 16.116 25.9983 14.5908 26 13V2C26 1.46957 25.7893 0.960859 25.4142 0.585786C25.0391 0.210714 24.5304 0 24 0Z"
+                  fill="#868686"
+                  fillOpacity="0.3"
+                />
+              </svg>
+            </div>
+            <p>
+              Faruq is an exceptionally skilled designer with clean, modern designs and a strong eye for layout and flow. He’s easy to work with, communicates clearly, and genuinely cares about delivering great results.
+            </p>
+          </div>
+          <div className="quoter-company">
+            <div className="name-picture">
+              <div className="review-pic">
+                <img src="https://res.cloudinary.com/dxg3pq0ma/image/upload/v1760017170/1745984992149_ob3bqh.jpg" alt="Ugo" />
+              </div>
+              <div className="review-name-role">
+                <h3>Ugo</h3>
+                <p>Founder, Beam</p>
+              </div>
+            </div>
+            <div className="company-logo">
+              <img src="https://res.cloudinary.com/dxg3pq0ma/image/upload/v1760017168/blocsocial_logo_ynmjga.jpg" alt="Bloc Social" />
+            </div>
+          </div>
+        </div>
+
+        <div className="review-list">
+          <div className="reviews-qoute">
+            <div className="qoute-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="27" viewBox="0 0 26 19" fill="none">
+                <path
+                  d="M11.5 2V13C11.4983 14.5908 10.8657 16.116 9.74081 17.2408C8.61595 18.3657 7.09079 18.9983 5.5 19C5.23478 19 4.98043 18.8946 4.79289 18.7071C4.60536 18.5196 4.5 18.2652 4.5 18C4.5 17.7348 4.60536 17.4804 4.79289 17.2929C4.98043 17.1054 5.23478 17 5.5 17C6.56087 17 7.57828 16.5786 8.32843 15.8284C9.07857 15.0783 9.5 14.0609 9.5 13V12H2C1.46957 12 0.960859 11.7893 0.585786 11.4142C0.210714 11.0391 0 10.5304 0 10V2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H9.5C10.0304 0 10.5391 0.210714 10.9142 0.585786C11.2893 0.960859 11.5 1.46957 11.5 2ZM24 0H16.5C15.9696 0 15.4609 0.210714 15.0858 0.585786C14.7107 0.960859 14.5 1.46957 14.5 2V10C14.5 10.5304 14.7107 11.0391 15.0858 11.4142C15.4609 11.7893 15.9696 12 16.5 12H24V13C24 14.0609 23.5786 15.0783 22.8284 15.8284C22.0783 16.5786 21.0609 17 20 17C19.7348 17 19.4804 17.1054 19.2929 17.2929C19.1054 17.4804 19 17.7348 19 18C19 18.2652 19.1054 18.5196 19.2929 18.7071C19.4804 18.8946 19.7348 19 20 19C21.5908 18.9983 23.116 18.3657 24.2408 17.2408C25.3657 16.116 25.9983 14.5908 26 13V2C26 1.46957 25.7893 0.960859 25.4142 0.585786C25.0391 0.210714 24.5304 0 24 0Z"
+                  fill="#868686"
+                  fillOpacity="0.3"
+                />
+              </svg>
+            </div>
+            <p>
+              Working with Faruq was a game changer for our project. He’s not just creative — he listens, asks smart questions, and always delivers beyond expectations. Super professional, fast, and easy to work with.
+            </p>
+          </div>
+          <div className="quoter-company">
+            <div className="name-picture">
+              <div className="review-pic">
+                <img src="https://ik.imagekit.io/pharkman/General%20Asset/27f0bfe4029ff598c6bd7668467cc016d55803b7.jpg" alt="Moore" />
+              </div>
+              <div className="review-name-role">
+                <h3>Akash</h3>
+                <p>Founder, Gleamy</p>
+              </div>
+            </div>
+            <div className="company-logo">
+              <img src="https://res.cloudinary.com/dxg3pq0ma/image/upload/v1760017543/Frame_2147228345_npk1l4.png" alt="Gleamy" />
+            </div>
+          </div>
+        </div>
+
+        <div className="review-list">
+          <div className="reviews-qoute">
+            <div className="qoute-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="27" viewBox="0 0 26 19" fill="none">
+                <path
+                  d="M11.5 2V13C11.4983 14.5908 10.8657 16.116 9.74081 17.2408C8.61595 18.3657 7.09079 18.9983 5.5 19C5.23478 19 4.98043 18.8946 4.79289 18.7071C4.60536 18.5196 4.5 18.2652 4.5 18C4.5 17.7348 4.60536 17.4804 4.79289 17.2929C4.98043 17.1054 5.23478 17 5.5 17C6.56087 17 7.57828 16.5786 8.32843 15.8284C9.07857 15.0783 9.5 14.0609 9.5 13V12H2C1.46957 12 0.960859 11.7893 0.585786 11.4142C0.210714 11.0391 0 10.5304 0 10V2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H9.5C10.0304 0 10.5391 0.210714 10.9142 0.585786C11.2893 0.960859 11.5 1.46957 11.5 2ZM24 0H16.5C15.9696 0 15.4609 0.210714 15.0858 0.585786C14.7107 0.960859 14.5 1.46957 14.5 2V10C14.5 10.5304 14.7107 11.0391 15.0858 11.4142C15.4609 11.7893 15.9696 12 16.5 12H24V13C24 14.0609 23.5786 15.0783 22.8284 15.8284C22.0783 16.5786 21.0609 17 20 17C19.7348 17 19.4804 17.1054 19.2929 17.2929C19.1054 17.4804 19 17.7348 19 18C19 18.2652 19.1054 18.5196 19.2929 18.7071C19.4804 18.8946 19.7348 19 20 19C21.5908 18.9983 23.116 18.3657 24.2408 17.2408C25.3657 16.116 25.9983 14.5908 26 13V2C26 1.46957 25.7893 0.960859 25.4142 0.585786C25.0391 0.210714 24.5304 0 24 0Z"
+                  fill="#868686"
+                  fillOpacity="0.3"
+                />
+              </svg>
+            </div>
+            <p>
+              Working with Faruq was smooth, he delivered on time, he works quite fast, and he has a sharp eye for clean, functional design.
+            </p>
+          </div>
+          <div className="quoter-company">
+            <div className="name-picture">
+              <div className="review-pic">
+                <img src="https://res.cloudinary.com/dxg3pq0ma/image/upload/v1760012045/1748900599685_qbnc9k.jpg" alt="Ifedapo" />
+              </div>
+              <div className="review-name-role">
+                <h3>Ifedapo</h3>
+                <p>Web Developer</p>
+              </div>
+            </div>
+            <div className="company-logo">
+              <img src="https://res.cloudinary.com/dxg3pq0ma/image/upload/v1760012045/logo_1_-g_emplw4.png" alt="Beam" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Testmonials;

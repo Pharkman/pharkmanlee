@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0rem;
+  padding: 4.8rem 0rem 5.5rem 0rem;
+  align-items: start;
+}
+
+.my-name{
+  display: flex;
+  padding: 1.25rem 2.5rem;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.my-name svg{
+  color: var(--text-clr);
+}
+
+.profilePic-location{
+  display: flex;
+  padding: 4rem 2.5rem 0rem 2.5rem;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.myName-role{
+  width: fit-content;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* .my-pic{
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 93/100;
+  border-radius: 24px;
+  border: 2px solid rgba(68, 68, 68, 0.80);
+  background: url("/public//images/faruq.jpg") lightgray 50% / cover no-repeat;
+  
+} */
+
+.name-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.name-dropdown-btn {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  cursor: pointer;
+  padding: .2rem .5rem;
+  border: 1px solid var(--text-clr, #6B717F);
+  border-radius: 999px;
+  line-height: 1; /* prevents weird line jumps */
+  white-space: nowrap; /* keeps “Faruq Arowolo” on one line */
+}
+
+.chev { transition: transform .18s ease; }
+.chev.open { transform: rotate(180deg); }
+
+/* The dropdown gallery sits on top of the flow, so it won’t break the paragraph */
+.name-gallery {
+  top: calc(100% + .5rem);
+  left: 0;
+  display: none;
+  gap: .5rem;
+  z-index: 5;
+}
+
+.name-gallery.show { display: flex; }
+
+.name-gallery img {
+  width: 60px;
+  height: 60px;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+
+.profile-summary{
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.hero-text{
+  display: flex;
+  align-items: start;
+  width: 46.9625rem;
+}
+
+.hero-h1{
+  color: var(--text-primary);
+  font-family: "MyFont";
+  font-size:  7.67306rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6.49256rem; /* 84.615% */
+  letter-spacing: -0.125rem;
+  text-transform: uppercase;
+  word-break: normal;
+  max-width: 100%;
+}
+
+.role-btns{
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.call-to-action-btns{
+  display: flex;
+  gap: 1.5rem;
+  width: fit-content;
+}
+
+.hero-btn{
+  display: flex;
+  padding: 0.875rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--btn-primary);
+  color: var(--btn-primary-text);
+  font-family: "Geist";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+  text-transform: uppercase;
+}
+
+.resume-btn{
+  display: flex;
+  padding: 0.875rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: transparent;
+  color: var(--btn-primary);
+  font-family: "Geist";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+  text-transform: uppercase;
+  border: 1px solid var(--btn-primary);
+}
+
+.resume-btn svg {
+  display: flex; 
+  color: var(--btn-primary);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn svg {
+  display: flex; 
+  color: var(--btn-primary-text);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-btn:hover svg {
+  display: flex; /* Shows the SVG on hover */
+  opacity: 1; 
+  transform: rotate(-20deg);
+}
+
+
+.resume-btn:hover {
+  background: var(--btn-primary);
+  color: var(--btn-primary-text);
+}
+
+.resume-btn:hover svg {
+  color: var(--btn-primary-text);
+}
+
+.summary-abt{
+  color: var(--sub-text);
+  font-size: 1.125rem;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+  width: 34rem;
+}
+
+.showreel{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  position: relative; 
+  will-change: transform;
+  transition: filter 0.3s ease;
+  padding: 0.75rem;
+  border-radius: 1.25rem;
+  background-color: var(--surface-modal);
+  backdrop-filter: blur(20px);
+}
+
+.showreel:hover .showreel-video img{
+  filter: grayscale(100%);
+}
+
+.showreel-video{
+  width: 14.375rem;
+  height: 8.0625rem;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.showreel-video svg {
+  color: #FFFFFF;
+  position: absolute;
+  cursor: pointer;
+}
+
+.linear-grey{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) -20.63%, rgba(0, 0, 0, 0.30) 112.7%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.reel-text{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--Spacing-Spacing-Sm, 0.5rem);
+  align-self: stretch;
+}
+
+.reel-text p{
+  color: var(--text-primary);
+  font-family: "Geist";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.video-content {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.video-player {
+  width: 65%;
+  border-radius: 10px;
+  height: 500px;
+  background-color: var(--surface-inverse);
+  object-fit: cover;
+  overflow: hidden;
+  justify-content: fill;
+  display: flex;
+}
+
+.video-player source{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.close-btn-v {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: var(--btn-primary);
+  border: none;
+  color: var(--btn-primary-text);
+  font-size: 28px;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 10%;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.theme-sound{
+  display: flex;
+  width: 1.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: fixed;
+  right: 40px;
+  top: 172px;
+  z-index: 999;
+}
+
+.sound-btn, .theme-btn{
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.14288rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7.14288rem;
+  background: var(--surface-modal);
+  cursor: pointer;
+}
+
+.sound-btn, .theme-btn svg{
+  color: var(--text-secondary);
+}
+
+
+
+.my-skills{
+  color: var(--text-clr-2);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 14%;
+}
+
+
+#home {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end;                 
+  width: 100%;              
+}
+
+@media screen and (max-width: 1120px){
+  .my-name{
+    display: flex;
+    width: 95%;
+    align-items: start;
+    justify-content: center;
+    padding: 1.25rem 0rem;
+  }
+
+  .home{
+    padding-top: 6.5rem;
+    gap: 3rem;
+  }
+
+  .my-name h1{
+    font-size: 6.52rem;
+    font-weight: 600;
+    text-align: start;
+    line-height: 100%;
+    width: 100%;
+  }
+
+  .profilePic-location{
+    padding: 0 0rem;
+    width: 95%;
+    flex-direction: column-reverse;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .time-image{
+    width: 45px;
+    height: auto;
+  }
+
+  .myName-role{
+    width: 100%;
+  }
+
+  .myRole{
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .my-name{
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .showreel{
+    width: 50%;
+  }
+
+  .showreel-video{
+    width: 100%;
+    height: auto;
+  }
+
+  .myName-role{
+    width: 100%;
+  }
+
+  .my-name{
+    display: flex;
+    padding: 1.25rem 1rem;
+    width: 100%;
+  }
+
+  .home{
+    padding-top: 6.5rem;
+  }
+
+  .my-name h1{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: start;
+    width: 100%;
+    line-height: 75px;
+  }
+
+  .profilePic-location{
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  .time-image{
+    width: 45px;
+    height: auto;
+  }
+
+  .myName-role{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .role-btns{
+    width: 100%;
+  }
+
+  .profile-summary{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-h1{
+    font-size:  4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.8625rem; 
+  }
+
+  .summary-abt{
+    width: 93%;
+    color: var(--sub-text);
+    font-size: 1.125rem;
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.045rem;
+  }
+
+  .call-to-action-btns{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .theme-sound{
+    right: 20px;
+  }
+
+  .my-skills{
+    color: var(--text-clr-2);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 50%;
+  }
+
+  .myRole{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .video-player{
+    width: 95%;
+    height: 300px;
+  }
+
+  .close-btn-v{
+    top: 180px;
+    right: 10px;
+  }
+}
+
+
+
+

@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --surface-primary: #F6F6F6;
+  --surface-modal: #FFFFFF;
+  --surface-inverse: #0A0A0A;
+
+  --btn-primary: #0A0A0A;
+  --btn-primary-text: #FFFFFF;
+  --btn-border-default: #C8C8C8;
+  --btn-active: #3C3C3C;
+
+  --text-primary: #0A0A0A;
+  --text-secondary: #2E2E2E;
+  --sub-text: #696969;
+  --text-inverse: #FFFFFF;
+
+}
+
+.dark-mode{
+  --surface-primary: #0A0A0A;
+  --surface-modal: #2E2E2E;
+  --surface-inverse: #FFFFFF;
+
+  --btn-primary: #FFFFFF;
+  --btn-primary-text: #0A0A0A;
+  --btn-border-default: #696969;
+  --btn-active: #F6F6F6;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #C8C8C8;
+  --sub-text: #A4A4A4;
+  --text-inverse: #0A0A0A;
+
+}
+
+body {
+  font-family: "MyFont", "Geist", sans-serif;
+  background-color: var(--surface-primary);
+  cursor: none;
+  box-sizing: border-box;
+}
+
+.about-me{
+  display: flex;
+  align-items: start;
+  width: 100%;
+  flex-direction: column;
+  min-height: auto; 
+  height: auto;
+  padding: 6.5rem 2.5rem;
+  gap: 3rem;
+}
+
+
+.my-images {
+  display: flex;
+  width: 100%;
+  height: auto; 
+  justify-content: space-between;
+}
+
+.image-1 {
+  width: 48%;
+  height: 0;  
+  padding-top: 48%;  
+  background: url("/public/images/faruq.jpg") no-repeat center center, var(--text-clr);  
+  background-size: cover;  
+  position: relative;
+  border-radius: 2rem;
+}
+
+.other-picture {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.other-image-1 {
+  width: 32%; 
+  height: 500px;
+  overflow: hidden;
+  width: 10.25rem;
+  height: 11.75rem;
+  /* transform: rotate(-20.825deg); */
+}
+
+.other-image-2 {
+  width: 32%; 
+  height: 500px;
+  overflow: hidden;
+  width: 20.75rem;
+  height: 23.8125rem;
+  aspect-ratio: 332/381;
+}
+
+.other-image-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.other-image-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* .other-picture{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+} */
+
+/* .other-image-1{
+  width: 32%;
+  display: flex;
+  overflow: hidden;
+  height: 100%;  
+  padding-top: 40%;  
+  background: url("/public/images/faruq1.jpg") no-repeat center center, var(--text-clr);  
+  background-size: cover;  
+  border-radius: 2rem;
+}
+
+.other-image-2{
+  width: 32%;
+  display: flex;
+  overflow: hidden;
+  height: 100%;  
+  padding-top: 40%;  
+  background: url("/public/images/faruq2.jpg") no-repeat center center, var(--text-clr);  
+  background-size: cover;  
+  position: relative;
+  border-radius: 2rem;
+} */
+
+/* .other-image-3{
+  width: 32%;
+  object-fit: cover;
+  display: flex;
+  overflow: hidden;
+  height: auto;  
+  padding-top: 40%;  
+  background: url("/public/images/faruq3.jpg") no-repeat center center, var(--text-clr);  
+  background-size: cover;  
+  position: relative;
+  border-radius: 2rem;
+} */
+
+/* .other-image {
+  display: block;       
+  width: 32%;               
+  height: 300px;                 
+  padding-top: 63%;        
+  background-color: var(--light-clr);
+  border-radius: 1.5rem; 
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  overflow: hidden;
+  align-items: center;
+}
+
+.other-image-1{
+  background: url("/public/images/faruq1.jpg") var(--light-clr)  50% / cover no-repeat;  
+}
+
+.other-image-2{
+  background: url("/public/images/faruq2.jpg") var(--light-clr)  50% / cover no-repeat;  
+}
+
+.other-image-3{
+  background: url("/public/images/faruq3.jpg") var(--light-clr)  50% / cover no-repeat;  
+} */
+
+
+.social-medias{
+  display: flex;
+  gap: 0.25rem;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  align-items: start;
+  width: 65%;
+  padding: 0.25rem;
+  border: 1px solid var(--strk-clr);
+  background-color: var(--bg-clr);
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
+
+.book-call, .resume{
+  color: var(--text-clr);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  display: flex;
+  gap: 0.4rem;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 1rem 1.83rem;
+  background-color: var(--light-clr);
+  overflow: hidden;
+  border: 1px solid var(--strk-clr);
+  /* width: 24%; */
+  align-items: center;
+  justify-content: center;
+}
+
+.first-social{
+  border-radius: 0.75rem 0.25rem 0.25rem 0.75rem;
+}
+
+.second-social, .third-social{
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+}
+
+.fourth-social{
+  border-radius: 0.25rem 0.75rem 0.75rem 0.25rem;
+}
+
+.book-call p{
+  z-index: 10;
+}
+
+.book-call svg{
+  width: 18px;
+  height: 18px;
+  color: var(--text-clr);
+  z-index: 10;
+}
+
+.resume p{
+  z-index: 10;
+}
+
+.social-medias img{
+  width: 18px;
+}
+
+.resume svg{
+  width: 18px;
+  height: 18px;
+  color: var(--text-clr);
+  z-index: 10;
+}
+
+/* .book-call::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; 
+  height: 100%;
+  background-color: var(--blue-clr);
+  transition: width 0.5s ease; 
+} */
+
+
+.book-call:hover{
+  transform: translateY(-4px);
+ transition: transform 0.7s ease-out, color 0.2s ease-out, border-bottom 0.5s ease-out;
+}
+
+.resume:hover{
+  transform: translateY(-4px);
+ transition: transform 0.7s ease-out, color 0.2s ease-out, border-bottom 0.5s ease-out;
+}
+
+
+.resume::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; 
+  height: 100%;
+  background-color: var(--blue-clr);
+  transition: width 0.5s ease; 
+}
+
+
+.resume:hover::before{
+  width: 100%;
+}
+
+.about-me-text{
+  display: flex;
+  width: 100%;
+  padding: 0rem 0rem 0rem 0rem;
+  align-items: end;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.about-me-para{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 49%;
+  background-color: var(--light-clr);
+  padding: 2.5rem 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid var(--strk-clr);
+}
+
+.about-me-para p{
+  color: var(--text-clr);
+  font-family: Switzer;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.about-me-para svg{
+  color: var(--text-clr);
+}
+
+/* .section-heading{
+  width: 100%;
+  display: flex;
+  width: fit-content;
+}
+
+.section-heading h1{
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6.25rem; 
+  letter-spacing: -0.225rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.section-sub-heading {
+  display: flex;
+  width: 22.5625rem;
+}
+
+.section-sub-heading p{
+  text-align: right;
+  font-family: "Geist";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.04rem;
+  text-transform: uppercase;
+  color: var(--sub-text);
+} */
+
+.short-about-me{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 3.5rem;
+  justify-content: end;
+  padding: 7.5rem 0;
+}
+
+.about-read-btn{
+  display: flex;
+  width: 26rem;
+  height: 23.8125rem;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.about-me-p{
+  display: flex;
+  width: 100%;
+  width: 22.8125rem;
+}
+
+.about-me-p p{
+  color: var(--text-secondary);
+  text-align: start;
+  font-family: "Geist";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 133.333% */
+}
+
+.read-more-btn{
+  width: fit-content;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--strk-clr);
+  color: var(--text-clr);
+  border-radius: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all ease-out 0.9s;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.read-more-btn svg{
+  color: var(--text-clr);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+}
+
+.read-more-btn:hover svg {
+  display: flex; /* Shows the SVG on hover */
+  opacity: 1; 
+  transform: rotate(-15deg);
+}
+
+.read-about-btn{
+  display: flex;
+  padding: 0.875rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--btn-primary);
+  color: var(--btn-primary-text);
+  font-family: "Geist";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.045rem;
+  text-transform: uppercase;
+}
+
+.read-about-btn svg {
+  display: flex; 
+  color: var(--btn-primary-text);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.read-about-btn:hover svg {
+  display: flex; /* Shows the SVG on hover */
+  opacity: 1; 
+  transform: rotate(-20deg);
+} 
+
+#about {
+  display: flex;
+  justify-content: space-between; 
+  align-items: start;      
+  height: fit-content;            
+  width: 100%;              
+}
+
+@media screen and (max-width: 1120px){
+  .about-me{
+    padding: 5.5rem 2rem 3.5rem 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .about-me-text{
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 0.625rem 0rem;
+    align-items: start;
+  }
+
+   .my-images{
+    width: 100%
+  }
+
+  .image-1{
+    padding-top: 100%;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .about-me{
+    padding: 2.5rem 1rem 3.5rem 1rem;
+    gap: 4.5rem;
+  }
+
+  .about-me-heading{
+    width: 100%;
+  }
+
+  .about-me-heading h1{
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .section-sub-heading {
+    width: 100%;
+  }
+
+  .section-sub-heading p{
+    text-align: left;
+  }
+
+  .about-me-p{
+    width: 95%;
+  }
+
+  .about-me-para p{
+    font-size: 1rem;
+  }
+
+  .my-name{
+    display: flex;
+    padding: 1.25rem 1rem
+  }
+
+   .my-images{
+    width: 100%;
+    gap: 2.5rem;
+  }
+
+  .image-1{
+    padding-top: 100%;
+  }
+
+  .about-me-text{
+    padding: 0rem 0rem;
+    height: fit-content;
+    width: 100%;
+    align-items: start;
+  }
+
+  .book-call{
+    color: var(--bg-clr);
+    font-size: 0.75rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .read-more-about{
+    width: 100%;
+  }
+
+  .resume{
+    color: var(--text-clr);
+    font-size: 0.75rem;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .resume svg{
+    width: 18px;
+    height: 18px;
+  }
+
+  .book-call svg{
+    width: 18px;
+    height: 18px;
+  }
+
+  .section-heading h1 {
+    font-size:  4.5rem;
+  }
+
+  .about-read-btn{
+    display: flex;
+    width: 100%;
+    height: 18.8125rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .short-about-me{
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 1rem 0;
+    gap: 2.5rem;
+  }
+
+  .other-image-2{
+    width: 100%; 
+    height: 380px;
+    overflow: hidden;
+    aspect-ratio: 332/381;
+  }
+}
