@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,40 +7,31 @@
   --surface-primary: #F6F6F6;
   --surface-modal: #FFFFFF;
   --surface-inverse: #0A0A0A;
-
   --btn-primary: #0A0A0A;
   --btn-primary-text: #FFFFFF;
   --btn-border-default: #C8C8C8;
   --btn-active: #3C3C3C;
-
   --text-primary: #0A0A0A;
   --text-secondary: #2E2E2E;
   --sub-text: #696969;
   --text-inverse: #FFFFFF;
   --corsor-color: #A4A4A4;
-
-  /* NEW: Cursor color tied to theme for contrast */
-  --cursor-color: var(--sub-text); /* Black in light, white in dark */
+  --cursor-color: var(--sub-text);
 }
 
 .dark-mode {
   --surface-primary: #0A0A0A;
   --surface-modal: #2E2E2E;
   --surface-inverse: #FFFFFF;
-
   --btn-primary: #FFFFFF;
   --btn-primary-text: #0A0A0A;
   --btn-border-default: #696969;
   --btn-active: #F6F6F6;
-
   --text-primary: #FFFFFF;
   --text-secondary: #C8C8C8;
   --sub-text: #A4A4A4;
   --text-inverse: #0A0A0A;
-
   --corsor-color: #A4A4A4;
-
-  /* OVERRIDE: Ensures --cursor-color updates to white in dark mode */
   --cursor-color: var(--sub-text);
 }
 
@@ -52,7 +42,7 @@ html {
 body {
   font-family: "MyFont", "Geist", sans-serif;
   background-color: var(--surface-primary);
-  cursor: none; /* Set by component, but safe to have here */
+  cursor: none; /* Hides default cursor everywhere */
   box-sizing: border-box;
 }
 
@@ -73,7 +63,6 @@ body {
   top: 50%;
   width: 8px;
   height: 8px;
-  /* CHANGED: Use CSS var instead of hardcoded #fff */
   background: var(--cursor-color);
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -86,7 +75,6 @@ body {
   top: 50%;
   width: 12px;
   height: 12px;
-  /* CHANGED: Use CSS var instead of hardcoded #fff */
   border: 3px solid var(--cursor-color);
   will-change: transform;
 }
@@ -120,9 +108,15 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* CHANGED: Use CSS var instead of hardcoded #fff */
   border: 3px solid var(--cursor-color);
   box-sizing: border-box;
   will-change: transform, width, height, border-radius, clip-path;
   display: none;
+}
+
+/* NEW: Turn off custom cursor completely on mobile/touch devices */
+@media (pointer: coarse) {
+  .target-cursor-wrapper {
+    display: none; /* Hides the dot, corners, outline — everything */
+  }
 }

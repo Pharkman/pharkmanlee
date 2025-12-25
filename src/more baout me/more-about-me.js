@@ -147,7 +147,7 @@ const MoreAboutMe = () => {
           <div className="about-image-converse">
 
             <div className="other-image-2-more" ref={imageRef}>
-              <img src="./images/faruq.jpg" alt="faruq" />
+              <img src="https://ik.imagekit.io/pharkman/General%20Asset/faruq.jpg" alt="faruq" />
             </div>
 
             <motion.div 
