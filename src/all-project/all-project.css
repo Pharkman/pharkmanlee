@@ -303,8 +303,7 @@ body {
 
 .modal-content{
   position: relative;
-  max-width: 100%;
-  width: 100%;
+  width: 55%;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -324,7 +323,7 @@ body {
 .close-btn {
   position: absolute;
   top: 0px;
-  right: 40px;
+  right: 0px;
   background: var(--btn-primary);
   border: none;
   color: var(--btn-primary-text);
@@ -337,7 +336,7 @@ body {
 
 .modal-details {
   display: flex;
-  width: 60%;
+  width: 100%;
   align-items: start;
 }
 
@@ -568,6 +567,10 @@ body {
 
   .projectName-category{
     gap: 0.5rem;
+  }
+
+  .modal-content{
+    width: 100%;
   }
 
   .modal-image {

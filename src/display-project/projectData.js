@@ -388,7 +388,7 @@ export const projectsData = [
         class: "UI-2",
         images: [
           { class: "UI-2-1", image: "https://ik.imagekit.io/pharkman/Zooma%201/Mockup%2017.png?updatedAt=1760883354972", alt: "zooma-ui" },
-          { class: "UI-2-1", image: "hhttps://ik.imagekit.io/pharkman/Zooma%201/Mockup%2022.png?updatedAt=1760883362801", alt: "zooma-ui" },
+          { class: "UI-2-1", image: "https://ik.imagekit.io/pharkman/Zooma%201/Mockup%2022.png?updatedAt=1760883362801", alt: "zooma-ui" },
         ],
       },
       { class: "UI-3", image: "https://ik.imagekit.io/pharkman/Zooma%201/597_1x_shots_so.png?updatedAt=1760883351713", alt: "zooma-ui" },
@@ -399,7 +399,7 @@ export const projectsData = [
           { class: "UI-4-1", image: "https://ik.imagekit.io/pharkman/Zooma%201/Mockup%204.png?updatedAt=1760883349927", alt: "zooma-ui" },
         ],
       },
-      { class: "UI-5", image: "https://ik.imagekit.io/pharkman/Zooma%201/zooma%20Proto.mp4?updatedAt=1760883385768", alt: "zooma-ui" },
+      { class: "UI-5", image: "https://ik.imagekit.io/pharkman/Zooma%201/zooma%20Prototype.mp4", alt: "zooma-ui" },
     ],
     prevProject: { name: "AvaPay", link: "/projects/avapay" },
     nextProject: { name: "GadgetFix", link: "/projects/gadgetfix" },
