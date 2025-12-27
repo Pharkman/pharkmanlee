@@ -199,7 +199,7 @@ const Home = () => {
         <div className="showreel">
           <div className="showreel-video" onClick={handleOpenModal} ref={showreelRef}>
             <img
-              src="https://ik.imagekit.io/pharkman/General%20Asset/Frame%202147225305j.png?updatedAt=1760938584579"
+              src="https://ik.imagekit.io/pharkman/General%20Asset/MacBook%20Air%20-%20577.png"
               alt="Showreel Thumbnail"
               className="thumbnail"
               width="100%"
