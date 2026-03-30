@@ -160,6 +160,8 @@ const Home = () => {
               <a
                 className="hero-btn cursor-target"
                 href="mailto:pharkmanlee@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => handleLinkClick("/sounds/menu-sound.wav")}
               >
                 Start a project
@@ -178,6 +180,8 @@ const Home = () => {
               <a
                 className="resume-btn cursor-target"
                 href="https://drive.google.com/file/d/1k364t4JL48balEcCeWhbMltqThAPuHsI/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => handleLinkClick("/sounds/menu-sound.wav")}
               >
                 Download Resume
