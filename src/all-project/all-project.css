@@ -382,11 +382,10 @@ body {
   .label{
     gap: 2.5rem;
     width: 95%;
-    flex-direction: column;
   }
 
   .label p{
-    font-size: 5.5rem;
+    font-size: 2.5rem;
     width: 100%;
     line-height: 65px;
     word-wrap: break-word;
@@ -429,7 +428,7 @@ body {
   }
 }
 
-@media screen and (max-width: 880px){
+/* @media screen and (max-width: 880px){
   .my-projects{
     padding: 3.5rem 0rem 3.5rem  0rem;
     gap: 2.5rem;
@@ -437,14 +436,14 @@ body {
 
   .label{
     gap: 2.5rem;
-    width: 95%;
-    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .label p{
-    font-size: 5.5rem;
+    font-size: 2.5rem;
     width: 100%;
-    line-height: 6.25rem;
+    line-height: 2.25rem;
     word-wrap: break-word;
   }
 
@@ -483,8 +482,7 @@ body {
   .project-category p{
     font-size: 0.75rem;
   }
-}
-
+} */
 
 @media screen and (max-width: 480px){
   .my-projects{

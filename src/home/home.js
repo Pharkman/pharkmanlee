@@ -177,7 +177,7 @@ const Home = () => {
             >
               <a
                 className="resume-btn cursor-target"
-                href="https://drive.google.com/file/d/1joSetmHuHoXUGA6puausdmiwtnYecQUw/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1k364t4JL48balEcCeWhbMltqThAPuHsI/view?usp=sharing"
                 onClick={() => handleLinkClick("/sounds/menu-sound.wav")}
               >
                 Download Resume
